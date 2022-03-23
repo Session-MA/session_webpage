@@ -110,7 +110,7 @@
 [data-theme="dark"] .nav-tabs .nav-link:hover,
 [data-theme="dark"].nav-tabs .nav-link:focus { border-color: #212529 #212529 #000; }
 [data-theme="dark"] .nav-tabs .nav-link.disabled { color: #333; }
-[data-theme="dark"] .nav-tabs .nav-link.active,
+[data-theme="dark"] .nav-tabs .nav-link.active .navbar-light,
 [data-theme="dark"] .nav-tabs .nav-item.show .nav-link { color: #fff; background-color: #000; border-color: #212529 #212529 #000; }
 
 /* PAGINATION */

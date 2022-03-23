@@ -1,0 +1,247 @@
+main{
+    min-height: 100vh;
+}
+
+.nav-item {
+    width: 8vw;
+    margin: auto;
+    text-align: center;
+    font-size: 2.5vh;
+    font-weight: 500;
+    
+}
+
+.nav-link.active{
+    color: white;
+}
+
+nav{
+    opacity: 1;
+}
+
+.navbar-nav{
+    margin: auto; 
+    margin-right: 3vw;  
+}
+
+#signin{
+    font-weight: 600;
+    font-size: 2.5vh;
+    border-style: none;
+    border-radius: 5rem;
+}
+
+#signin_white{
+    background:transparent;
+    color: white;
+    font-weight: 600;
+    font-size: 2.5vh;
+    border-style: dashed;
+    border-color: white;
+    border-width: 0.4vh;
+    border-radius: 5rem;
+}
+
+#login{
+    width: 30vw;
+    height: 100vh;
+}
+/* // Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) { ... } */
+
+@media all and (max-width:992px) {
+
+    a#signin{
+        
+        width: 120px;
+        margin: auto;
+    }
+    div.signin{
+        width: 120px;
+        margin:auto;
+    }
+}
+
+
+
+.heading{
+    color: white;
+    padding-left: inherit;
+    
+}
+
+
+section#blog_title{
+    height: 80vh;   
+    position: relative;
+    
+    /* background-image: url('blog-cover.jpeg') ; */
+    background-size: cover;
+    opacity: 1;
+    background-repeat: no-repeat;   
+}
+
+section#title{
+    height: 100vh;    
+    position: relative;
+    background-image: url('../images/cover.svg') ;
+    background-size: cover;
+    background-repeat: no-repeat;   
+    
+    
+}
+h1{
+    font-size: 6.5vh;
+}
+h2{
+    font-size: 5.5vh;
+}
+p#theme-desc{
+    font-size: 2.6vh;
+}
+.row{
+    padding-bottom: 4vh;
+}
+#startsession{
+    margin-left: 10px;
+    padding: 2vh 2.5vw;
+    color: white;
+    font-weight: 500;
+    font-size: 1.8vw;
+    background-color: dodgerblue;
+    border: 0;
+}
+div#white_header{
+    background-color: rgba(255, 255, 255, 0.9) ;
+}
+
+div#dark_header{
+    background-color: rgb(37, 37, 37) ;
+}
+.container#heading{
+    padding-bottom: 5%;
+    
+}
+button#technology{
+    background:white;
+    border-color:  #532ddd;
+    color:  #532ddd;
+}
+.btn{
+    font-size: 2.5vh;
+    font-weight: 500;
+}
+section#session-description{
+    height:100vh;
+    background-image: url('../images/grn-pti.svg') ;
+    background-size: contain;
+    background-position: center;
+    /* background-size: 100%; */
+
+    background-repeat: no-repeat;
+}
+
+section#about-description{
+    
+    background-image: url('../images/grn-pti.svg') ;
+    background-size: contain;
+    background-color: #052325;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+span{
+    font-weight: 300;
+}
+
+button.btn{
+    border-radius: 5rem;
+}
+
+#join{
+    font-weight: 500;
+    font-size: 1.5vw;
+}
+#readmore{
+    font-weight: 500;
+    font-size: 1.5vw;
+    border-radius: 5rem;
+}
+button.btn.bouton-out{
+    border-width: 0.4vh;
+}
+/* @keyframes aig-rot {
+    0%   { transform: rotate(0deg); }
+    20%  { transform: rotate(45deg); }
+    25%  { transform: rotate(35deg); }
+    30%  { transform: rotate(55deg); }
+    35%  { transform: rotate(45deg); }
+    50%  { transform: rotate(0deg); }
+    70%  { transform: rotate(-45deg); }
+    75%  { transform: rotate(-35deg); }
+    80%  { transform: rotate(-55deg); }
+    85%  { transform: rotate(-45deg); }
+    100%  { transform: rotate(0deg); }
+}
+
+#aig:hover{
+    transform-origin: center center;
+    transform-box: fill-box;
+    animation: aig-rot 4s ease-in-out;
+} */
+.form-check-input:checked{
+    background-color: darkgray;
+    border-color: darkgray;
+}
+
+label#darkModeLabel{
+    font-weight: 500;
+}
+
+#blog_disp{
+    padding: 0vh 28vw;
+}
+
+div.overlay{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+#navbarSupportedContent > ul > li.nav-item.dropdown > ul{
+    border-width: 0.4vh;
+    border-color: black;
+    border-radius: 0;
+}
+
+#prod_menu{
+    width: 25vw;
+    height: 30vh;
+}
+#bord_left{
+    border-width: 0.4vh;
+    border-color: black;
+    border-left: solid;
+}
+#tutoring_intro{
+    background-color: #f16163;
+}
+#tutoring_topics{
+    background-color: rgb(61, 209, 202);
+}
+#tr_display{
+    min-height: 230px;
+    background: white;
+    border-radius: 1rem;
+}

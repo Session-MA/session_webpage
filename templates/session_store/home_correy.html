@@ -1,0 +1,10 @@
+{% extends "session_store/base.html" %}
+{% block content %}
+    {% for post in posts %}
+        
+        {{ post.author }} {{ post.date_posted }}    
+        {{ post.title }}
+        {{ post.content }}
+          
+    {% endfor %}
+{% endblock content %}

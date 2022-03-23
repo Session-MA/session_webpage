@@ -5,8 +5,8 @@ var darkLang = "Dark";
 var lightLang = "Light";
 
 var imgID = "logo";
-var darkImg = "../assets/images/session_logo_dark.svg";
-var lightImg = "../assets/images/session_logo_white.svg";
+var darkImg = "../images/session_logo_dark.svg";
+var lightImg = "../images/session_logo_white.svg";
 
 window.addEventListener('load', function () {
   if (darkMode) {

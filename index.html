@@ -1,4 +1,3 @@
-{% load static %}
 <!DOCTYPE html>
 <html>
     <head>
@@ -9,8 +8,8 @@
         <!-- Bootstrap CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-        <link href="{% static 'session_store/css/main.css' %}" rel="stylesheet">
-        <link href="{% static 'session_store/css/dark_theme.css' %}" rel="stylesheet">
+        <link href="./static/session_store/css/main.css" rel="stylesheet">
+        <link href="./static/session_store/css/dark_theme.css" rel="stylesheet">
         
         {% if title %}
             <title>Session - {{ title }}</title>
@@ -28,7 +27,7 @@
                             <span class="navbar-toggler-icon"></span>
                         </button>
                         <a class="navbar-brand py-3 mx-0" href="{% url 'store_home' %}">
-                            <img src="{% static 'session_store/images/session_logo_black.svg' %}" alt="#" width="151" height="60" id="logo">
+                            <img src="./static/session_store/images/session_logo_black.svg" alt="#" width="151" height="60" id="logo">
                         </a>
                         
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -41,7 +40,7 @@
                                         <div class="container d-flex align-items-center justify-content-center" id="prod_menu">    
                                             <div class="row mr-2 py-0" id="prod_menu">
                                                 <div class="col-7 d-flex flex-column align-items-center justify-content-center">
-                                                    <a class="dropdown-item" href="#"><img class="img-fluid" src="{% static 'session_store/images/tutoring.svg' %}" width= "180px" height="180px" alt="#">
+                                                    <a class="dropdown-item" href="#"><img class="img-fluid" src="./static 'session_store/images/tutoring.svg" width= "180px" height="180px" alt="#">
                                                     </a>
                                                     
                                                 </div>
@@ -49,8 +48,8 @@
                                             
                                                 <div class="col-5 d-flex flex-column align-items-start justify-content-center" id="bord_left">
                                                     
-                                                    <li><a class="dropdown-item mb-2 fs-5" href="{% url 'store_tutoring' %}">Tutoring</a></li>
-                                                    <li><a class="dropdown-item mt-2 fs-5" href="#">Collabing</a></li>
+                                                    <li><a class="dropdown-item mb-2 fs-5" href="./product/product.html">Tutoring</a></li>
+                                                    <!-- <li><a class="dropdown-item mt-2 fs-5" href="#">Collabing</a></li> -->
                                                         
                                                     
                                                 </div>
@@ -59,7 +58,7 @@
                                     </ul>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="{% url 'store_tutoring' %}">
+                                    <a class="nav-link active" aria-current="page" href="./product/product.html">
                                         Learn
                                     </a>
                                 </li>
@@ -80,23 +79,11 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="{% url 'store_about' %}">
+                                    <a class="nav-link active" aria-current="page" href="./about.html">
                                         About us
                                     </a>
                                 </li>
-                            </ul>
-                            {% if user.is_authenticated %}
-                                <div class="signin">
-                                    <a type="button" class="btn btn-dark py-2 px-4" href="{% url 'login' %}" id="signin"> Log In</a>
-                                </div>
-                            {% else %}
-                                <div class="signin">
-                                    <a type="button" class="btn btn-dark py-2 px-4" href="{% url 'profile' %}" id="signin"> Profile</a>
-                                </div>
-                                <div class="signin">
-                                    <a type="button" class="btn btn-dark py-2 px-4" href="{% url 'logout' %}" id="signin"> Log Out</a>
-                                </div>
-                            {% endif %}    
+                            </ul>   
                         </div>
                     </div>
                 </nav>    
@@ -105,14 +92,141 @@
 
         <!-- Body -->
         <main>
-            {% if messages %}
-                {% for message in messages %}
-                    <div class="alert alert-{{ message.tags }}">
-                        {{ message }}
+            <section class="d-flex img-fluid align-items-center" id="title">
+                <div class="container" id="heading">
+                    <div class="row gx-0 pt-5">
+                        <div class="col-md px-0">
+                            <h1 class="heading"> Unique Learning <br>Experience.</h1>
+                        </div>
                     </div>
-                {% endfor %}
-            {% endif %}
-            {% block content %}{% endblock content %}
+                    <div class="row gx-0">
+                        <div class="col-md-6 px-0">
+                            <button type="button" class="btn btn-light " id="startsession">Start session</button>
+                        </div>
+                    </div>
+                </div>
+            </section>    
+            <section class="bg-light px-5 pb-0 pt-4" >
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md px-5 py-3">
+                            <button type="button" class="btn btn-outline-danger py-2 px-4 mx-3">Language</button>
+                            <button type="button" class="btn bouton-out btn-outline-primary py-2 px-4 mx-3">Business</button>
+                            <button type="button" class="btn bouton-out btn-dark py-2 px-4 mx-3" id="technology">Technology</button>
+                            <button type="button" class="btn bouton-out btn-outline-dark py-2 px-4 mx-3">Design</button>
+                        </div>
+                    </div>
+                    <div class="row align-items-center justify-content-between ">
+                        <div class="col-md text-start p-5">
+                            <h2 class="pb-5">Technology</h2>
+                            <p id="theme-desc">In this theme, you will learn about Computer Basics, Office Tools, Web, Python, Data and more...</p>
+                            <p id="theme-desc">Gain entry to various IT jobs, take your project to another level or simply have fun.</p>
+                            <a href="#" class="btn btn-light mt-3">
+                                <i class="bi bi-chevron-right"></i> Check it
+                            </a>
+                        </div>
+                        <div class="col-md p-5 pt-0">
+                            <img class="img-fluid" src="./static/session_store/images/tech.svg" alt="#">
+                        </div>
+                    </div>
+                </div>    
+            </section>
+            <section class="bg-white pb-5 pt-0" id="session-description">
+                <div class="container-fluid px-0 img-fluid">
+                    <img src="./static/session_store/images/bande-mar.svg" alt="">
+                </div>
+                
+                <div class="container px-5">
+                    <div class="row text-center align-items-center justify-content-between ">
+                        
+                        <div class="col-md p-5">   
+        
+                            <h1 class="pb-4">Session makes learning <br>actionable and efficient</h1>
+                            <p class="px-5 mx-5"id="theme-desc">
+                                We offer you the freedom to learn wherever you are.
+                            </p>    
+                            <p class="px-5 mx-5"id="theme-desc">
+                                Our Mission is to offer the best tutoring and accompaniment experience by fitting our learners with handpicked experienced tutors who share our values of trust, honesty and passion for knowledge.
+                            </p>
+                            <p class="px-5 mx-5"id="theme-desc"> 
+                                Our methods and subjects make the learning material we design actionable and easier to apply in real life.
+                            </p>
+                            <p class="px-5 mx-5"id="theme-desc">
+                                Our courses are updated and adapted to every learner's goal. This contributes to making the learning process efficient.
+                            </p>
+                        </div>
+                    </div>
+                </div> 
+            </section>
+            <section class="bg-light pb-5 pt-0" id="session-indicators">
+                <div class="container-fluid">
+                    <div class="row text-center align-items-center justify-content-between ">
+                            
+                        <div class="col-md p-5 pb-0">
+                            <h2 class="py-3"> Get the best learning experience<br>and learn the skills you need </h2>    
+                        </div>
+                        <div class="row p-0">
+                            <div class="col-md p-5">
+                                
+                                <h2 class="py-3"> 500 +<br>
+                                <span> sessions </span> 
+                                </h2>
+                                
+                            </div>
+                            <div class="col-md p-5">
+                                <h2 class="py-3"> 100 +<br>
+                                    <span> participants </span> 
+                                </h2>    
+                            </div>
+                            <div class="col-md p-5">
+                                <h2 class="py-3"> 50 +<br>
+                                    <span> courses </span> 
+                                </h2>    
+                            </div>
+                        </div>
+                        <div class="col-md p-5 py-0">
+                            <button type="button" class="btn btn-primary py-3 px-5 mx-3" id="join">Join</button>    
+                        </div>
+                    </div>    
+                </div>
+            </section>
+            <section class="bg-light px-5 pb-0 pt-4" >
+                <div class="container">
+                    <div class="row align-items-center justify-content-between ">
+                        <div class="col-md text-start p-5">
+                            <h2 class="pb-5">Schedule an <br>orientation session</h2>
+                            <p id="theme-desc"> Our orientation session helps you get a clear idea about our solutions and their adaptibiliy.</p>
+                            <p id="theme-desc">Our policy is to be 100% transparent.</p>
+                            <p id="theme-desc">You set your goals and we help you reach them.</p>
+                            <a href="#" class="btn btn-dark py-3 px-4 mx-3 my-5" id="readmore">
+                                <i class="bi bi-chevron-right"></i> Read more
+                            </a>
+                        </div>
+                        <div class="col-md p-5 pt-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 470 470">
+                                <defs>
+                                    <style>.cls-1{fill:#fff;}.cls-2{fill:#f1ead8;}.cls-3{fill:#ff8f95;}.cls-4{fill:#082947;}.cls-5{fill:#7e91e0;}.cls-6{fill:#f2484b;}</style>
+                                </defs>
+                                <title>orient</title>
+                                <g id="orientation">
+                                    <path class="cls-1" d="M90.6,111.31A189.85,189.85,0,0,0,44.7,235c0,104.77,85.23,190,190,190s190-85.23,190-190S339.46,45,234.7,45A189.85,189.85,0,0,0,111,90.9a7.49,7.49,0,0,1-10.33-.55Q95.18,95.48,90.06,101A7.49,7.49,0,0,1,90.6,111.31ZM227.5,90.19V67.5a7.5,7.5,0,0,1,15,0V90.21a144.85,144.85,0,0,1,61.94,17.53,7.5,7.5,0,0,1,3,10.18,1.74,1.74,0,0,1-.11.18,138.39,138.39,0,0,1,14.54,10.38l20.94-11.43A7.5,7.5,0,0,1,353,127.22l-11.43,20.94A136.94,136.94,0,0,1,351.9,162.7l.18-.11a7.51,7.51,0,0,1,10.19,3,145,145,0,0,1,17.52,61.94H402.5a7.5,7.5,0,0,1,0,15H379.81C376,316.5,316.5,376,242.5,379.81V402.5a7.5,7.5,0,0,1-15,0V379.79a144.85,144.85,0,0,1-61.94-17.53,7.5,7.5,0,0,1-3-10.18,1.74,1.74,0,0,1,.11-.18,135.53,135.53,0,0,1-14.54-10.38L127.23,353a7.5,7.5,0,0,1-10.18-10.18l11.43-20.93a137,137,0,0,1-10.39-14.54l-.17.11a7.51,7.51,0,0,1-10.18-3A144.85,144.85,0,0,1,90.21,242.5H67.5a7.5,7.5,0,0,1,0-15H90.19C94,153.5,153.5,94,227.5,90.19Z"/>
+                                    <path class="cls-2" d="M371.75,235A137.1,137.1,0,0,0,266.16,101.61c0-.12,0-.25.08-.37a139.29,139.29,0,0,0-17.62-2.94l.11.38c-4.61-.46-9.3-.71-14-.71s-9.42.25-14,.71l.11-.38a139,139,0,0,0-17.62,2.94c0,.12.05.25.08.37a137.08,137.08,0,0,0,0,266.83c0,.13-.05.25-.08.38a139,139,0,0,0,17.62,2.94l-.11-.39a139,139,0,0,0,28.06,0l-.12.39a139.14,139.14,0,0,0,17.63-2.94,2.57,2.57,0,0,1-.08-.38A137.09,137.09,0,0,0,371.75,235Z"/>
+                                    <path class="cls-3" d="M235,15C113.69,15,15,113.69,15,235s98.69,220,220,220,220-98.69,220-220S356.31,15,235,15Zm-.3,425c-113,0-205-92-205-205A204.87,204.87,0,0,1,79.22,101.54a7.5,7.5,0,0,1,10.58-.8l.26.25q5.11-5.52,10.62-10.63l-.25-.26a7.51,7.51,0,0,1,.8-10.58A204.9,204.9,0,0,1,234.7,30c113,0,205,92,205,205S347.73,440,234.7,440Z"/>
+                                    <path class="cls-4" d="M234.7,30A204.9,204.9,0,0,0,101.23,79.52a7.5,7.5,0,0,0-.79,10.58,2.83,2.83,0,0,0,.24.25A7.49,7.49,0,0,0,111,90.9,189.85,189.85,0,0,1,234.7,45c104.76,0,190,85.23,190,190s-85.24,190-190,190-190-85.23-190-190A189.85,189.85,0,0,1,90.6,111.31,7.49,7.49,0,0,0,90.06,101l-.26-.25a7.5,7.5,0,0,0-10.58.79A204.93,204.93,0,0,0,29.7,235c0,113,92,205,205,205s205-92,205-205S347.73,30,234.7,30Z"/>
+                                    <path class="cls-4" d="M290.76,37.82A204.84,204.84,0,0,0,148.84,49a7.5,7.5,0,0,0-3.66,10l.17.31a7.5,7.5,0,0,0,9.79,3.35A189.85,189.85,0,0,1,286.66,52.24C387.43,80.9,446.11,186.19,417.45,287S283.51,446.41,182.74,417.76,23.29,283.81,51.94,183a189.86,189.86,0,0,1,78-106.42,7.51,7.51,0,0,0,2.31-10.08c-.06-.1-.12-.21-.19-.31a7.5,7.5,0,0,0-10.39-2.13A204.89,204.89,0,0,0,37.51,178.94C6.6,287.66,69.91,401.27,178.63,432.18S401,399.79,431.88,291.06,399.49,68.73,290.76,37.82Z"/>
+                                    <path class="cls-4" d="M271.68,110.31a129.77,129.77,0,0,1,55.24,32.77c50.69,50.68,50.69,133.16,0,183.84a129.77,129.77,0,0,1-55.24,32.77,7.49,7.49,0,0,0-5.14,9.1c0,.07,0,.14,0,.2a7.5,7.5,0,0,0,9.3,5.1,144.88,144.88,0,0,0,56.19-31.41l16.06,16.06a7.5,7.5,0,0,0,10.6-10.6l-16-16.05c49.64-55,49.64-139.18,0-194.18l16-16a7.5,7.5,0,0,0-10.6-10.6l-16.06,16.06a144.88,144.88,0,0,0-56.19-31.41,7.5,7.5,0,0,0-9.3,5.1c0,.07,0,.13,0,.2A7.5,7.5,0,0,0,271.68,110.31Z"/>
+                                    <path class="cls-4" d="M111.26,348.14a7.5,7.5,0,0,0,10.6,10.6l16.06-16.06a144.88,144.88,0,0,0,56.19,31.41,7.52,7.52,0,0,0,7.41-1.9,7.44,7.44,0,0,0,1.89-3.2c0-.06,0-.13.05-.2a7.49,7.49,0,0,0-5.14-9.1,129.77,129.77,0,0,1-55.24-32.77c-50.69-50.68-50.69-133.16,0-183.84a129.77,129.77,0,0,1,55.24-32.77,7.49,7.49,0,0,0,5.14-9.1c0-.07,0-.14-.05-.2a7.5,7.5,0,0,0-9.3-5.1,144.88,144.88,0,0,0-56.19,31.41l-16.06-16.06a7.5,7.5,0,0,0-10.6,10.6l16,16c-49.64,55-49.64,139.18,0,194.18Z"/>
+                                </g>
+                                <g id="aig">
+                                    <polygon class="cls-5" points="271.23 242.5 198.77 242.5 235 365.88 271.23 242.5"/>
+                                    <polygon class="cls-6" points="271.23 227.5 235 104.12 198.77 227.5 271.23 227.5"/>
+                                    <path class="cls-4" d="M181.58,232.8l0,.09s0,.05,0,.08a5.84,5.84,0,0,0-.18.83,2,2,0,0,0,0,.24,6.62,6.62,0,0,0,0,1.92,1.85,1.85,0,0,0,0,.23,5.69,5.69,0,0,0,.18.84s0,.06,0,.08l0,.08,0,.06,39.48,134.48,6.72,22.88a7.51,7.51,0,0,0,14.4,0l6.72-22.88,39.49-134.49s0-.13,0-.13a.31.31,0,0,0,0-.08,6,6,0,0,0,.18-.84,1.57,1.57,0,0,0,0-.23,7.48,7.48,0,0,0,.07-1,7.77,7.77,0,0,0-.07-1,1.7,1.7,0,0,0,0-.22,5.69,5.69,0,0,0-.18-.84s0-.06,0-.08l0-.09c0-.05-39.5-134.53-39.5-134.53L242.2,75.39a7.5,7.5,0,0,0-14.4,0l-6.72,22.88S181.6,232.75,181.58,232.8Zm89.65,9.7L235,365.88,198.77,242.5Zm0-15H198.77L235,104.12Z"/>
+                                </g>
+                            </svg>    
+                        </div>
+                    </div>
+                </div>    
+            </section>
         </main>
         
         <!-- Footer -->
@@ -205,6 +319,6 @@
         <!-- Option 2: Separate Popper and Bootstrap JS -->
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
-        <script src="{% static 'session_store/js/dark_theme.js' %}"></script>
+        <script src="./static/session_store/js/dark_theme.js"></script>
     </body>
 </html>

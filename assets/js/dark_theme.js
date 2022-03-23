@@ -5,8 +5,8 @@ var darkLang = "Dark";
 var lightLang = "Light";
 
 var imgID = "logo";
-var lightImg = "../../assets/images/session_logo_dark.svg";
-var darkImg = "../../assets/images/session_logo_white.svg";
+var lightImg = "../assets/images/session_logo_dark.svg";
+var darkImg = "../assets/images/session_logo_white.svg";
 
 
 window.addEventListener('load', function () {

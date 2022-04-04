@@ -6,6 +6,14 @@ title: Home
 
 
 <main>
+    <style>
+
+        iframe {
+            overflow:hidden;
+            overflow-y:scroll;
+        }
+        
+    </style>
     <section class="d-flex img-fluid align-items-center" id="title">
         <div class="container" id="heading">
             <div class="row gx-0 pt-5">
@@ -23,14 +31,43 @@ title: Home
     <section class="bg-light px-5 pb-0 pt-4">
         <div class="container">
             <div class="row">
-                <div class="col-md-auto px-5 py-3">
-                    <button type="button" class="btn btn-outline-danger py-2 px-4 mx-3 my-2">Language</button>
-                    <button type="button" class="btn bouton-out btn-outline-primary py-2 px-4 mx-3 my-2">Business</button>
-                    <button type="button" class="btn bouton-out btn-dark py-2 px-4 mx-3 my-2" id="technology">Technology</button>
-                    <button type="button" class="btn bouton-out btn-outline-dark py-2 px-4 mx-3 my-2">Design</button>
+                <div class="col px-5 py-3">
+                    <button type="button" class="btn bouton-out btn-outline-danger py-2 px-4 mx-3 my-2" onclick="show('lang');" >Language</button>
+                    <button type="button" class="btn bouton-out btn-outline-primary py-2 px-4 mx-3 my-2" onclick="show('busi');">Business</button>
+                    <button type="button" class="btn bouton-out btn-dark py-2 px-4 mx-3 my-2" id="technology" onclick="show('tech');">Technology</button>
                 </div>
             </div>
-            <div class="row align-items-center justify-content-between ">
+            <div class="row align-items-center justify-content-between" id="lang">
+                <div class="col-md text-start p-5">
+                    <h2 class="pb-5">Language</h2>
+                    <p id="theme-desc">In this theme, you will learn about Computer Basics, Office Tools, Web, Python,
+                        Data and more...</p>
+                    <p id="theme-desc">Gain entry to various IT jobs, take your project to another level or simply have
+                        fun.</p>
+                    <a href="#" class="btn btn-light mt-3">
+                        <i class="bi bi-chevron-right"></i> Check it
+                    </a>
+                </div>
+                <div class="col-md p-5 pt-0">
+                    <img class="img-fluid" src="./assets/images/language.svg" alt="#">
+                </div>
+            </div>
+            <div class="row align-items-center justify-content-between" id="busi" style="display: none;">
+                <div class="col-md text-start p-5">
+                    <h2 class="pb-5">Business</h2>
+                    <p id="theme-desc">In this theme, you will learn about Computer Basics, Office Tools, Web, Python,
+                        Data and more...</p>
+                    <p id="theme-desc">Gain entry to various IT jobs, take your project to another level or simply have
+                        fun.</p>
+                    <a href="#" class="btn btn-light mt-3">
+                        <i class="bi bi-chevron-right"></i> Check it
+                    </a>
+                </div>
+                <div class="col-md p-5 pt-0">
+                    <img class="img-fluid" src="./assets/images/business.svg" alt="#">
+                </div>
+            </div>
+            <div class="row align-items-center justify-content-between" id="tech" style="display: none;">
                 <div class="col-md text-start p-5">
                     <h2 class="pb-5">Technology</h2>
                     <p id="theme-desc">In this theme, you will learn about Computer Basics, Office Tools, Web, Python,
@@ -119,9 +156,23 @@ title: Home
                         adaptibiliy.</p>
                     <p id="theme-desc">Our policy is to be 100% transparent.</p>
                     <p id="theme-desc">You set your goals and we help you reach them.</p>
-                    <a href="#" class="btn btn-dark py-3 px-4 mx-3 my-5" id="readmore">
+                    
+                    <button type="button" class="btn btn-dark py-3 px-4 mx-3 my-5" id="readmore" data-bs-toggle="modal" data-bs-target="#exampleModal">
                         <i class="bi bi-chevron-right"></i> Read more
-                    </a>
+                    </button>
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Getting to know you form</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdhaoSeRNXgOroEqvvLqm51MiTV83OE-Yj6y645nElf3WSylg/viewform?embedded=true" width="480" height="500" scrolling="yes" frameborder="0" marginheight="0" marginwidth="0" id="iFrame1" style="overflow: hidden;" >Chargement…</iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md p-5 pt-0">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 470 470">

@@ -35,7 +35,7 @@ function splitScroll() {
         .setClassToggle('.container.medtech','show')
         // .addIndicators()
         .addTo(controller);
-        scene2.offset(400)
+        scene2.offset(460)
 
 }
 

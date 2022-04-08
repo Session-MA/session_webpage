@@ -43,10 +43,10 @@ nav{
 }
 
 .textlang{
-    height:100vh;
+    height:80vh;
 }
 .textlangg{
-    height:100vh;
+    height:80vh;
 }
 
 .texttech{
@@ -80,7 +80,9 @@ div#medlang, div#medtech{
     width:30%;
 } */
 
-
+#fun{
+    height:100vh;
+}
 
 
 @media only screen and (max-width: 992px) {
@@ -100,15 +102,18 @@ div#medlang, div#medtech{
         background-size: cover !important;
         background-repeat: no-repeat !important;   
     }
+    #prod_menu{
+        width: 100% !important;
+        
+    }
 
-  }
+}
 
 
 
 .medtech.show{
     opacity:1;
     width: 35% !important;
-    
 }
 
 

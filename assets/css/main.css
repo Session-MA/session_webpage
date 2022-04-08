@@ -28,6 +28,96 @@ nav{
     border-radius: 5rem;
 }
 
+/* Hide scrollbar for Chrome, Safari and Opera */
+.container-fluid::-webkit-scrollbar {
+    display: none;
+}
+
+
+#med{
+    height:100vh;
+}
+
+#arggs{
+    height: 400vh;
+}
+
+.textlang{
+    height:100vh;
+}
+.textlangg{
+    height:100vh;
+}
+
+.texttech{
+    height:60vh;
+}
+.texttechh{
+    height:100vh;
+}
+
+div#medlang, div#medtech{
+    height:60vh;
+}
+
+.medlang{
+    opacity:0;
+    transition: opacity 0.6s;
+}
+
+.medlang.show{
+    opacity:1;
+    width: 35% !important;
+    
+}
+
+.medtech{
+    opacity:0;
+    transition: opacity 0.3s;
+}
+
+/* .speci-btn{
+    width:30%;
+} */
+
+
+
+
+@media only screen and (max-width: 992px) {
+    .medlang, .medtech {
+        opacity: 1;
+        width:80% !important;
+    }
+    #decoy{
+        width: 80% !important; 
+    }
+    
+    section#title{
+        height: 100vh !important;    
+        position: relative !important;
+        background-position: 20%;
+        background-image: url('../images/cover.svg') !important;
+        background-size: cover !important;
+        background-repeat: no-repeat !important;   
+    }
+
+  }
+
+
+
+.medtech.show{
+    opacity:1;
+    width: 35% !important;
+    
+}
+
+
+
+#snaptext::-webkit-scrollbar {
+    display: none;
+}
+
+
 #signin_white{
     background:transparent;
     color: white;
@@ -131,17 +221,30 @@ button#technology{
     border-color:  #532ddd;
     color:  #532ddd;
 }
+button#technology:hover{
+    background:#532ddd !important;
+    border-color:  #532ddd !important;
+    color:  white !important;
+}
+
 .btn{
     font-weight: 500;
 }
 section#session-description{
     height:100vh;
-    background-image: url('../images/grn-pti.svg') ;
-    background-size: contain;
-    background-position: center;
+    /* background-image: url('../images/grn-pti.svg') ;
+    background-size: 120%;
+    background-position: center; */
     /* background-size: 100%; */
 
+    
+}
+#sessdescr{
+    background-image: url('../images/grn-pti.svg') ;
+    background-size: 100%;
+    background-position: center; 
     background-repeat: no-repeat;
+    height: 100vh;
 }
 
 section#about-description{
@@ -151,6 +254,7 @@ section#about-description{
     background-color: #052325;
     background-repeat: no-repeat;
     background-position: center;
+    
 }
 
 span{
@@ -245,3 +349,5 @@ div.overlay{
     background: white;
     border-radius: 1rem;
 }
+
+

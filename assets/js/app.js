@@ -15,9 +15,9 @@ function splitScroll() {
     controller = new ScrollMagic.Controller();
 
     var scene = new ScrollMagic.Scene({
-        duration: height_snaptext*0.7,
-        triggerElement: '#snaplang',
-        triggerHook: 0,
+        duration: 700,
+        triggerElement: '#socialmedi',
+        triggerHook: 0.5,
         
     })
         .setPin('#medlang')
@@ -27,15 +27,15 @@ function splitScroll() {
         scene.offset(360)
     
     var scene2 = new ScrollMagic.Scene({
-        duration: height_snaptext*0.6,
+        duration: 800,
         triggerElement: '#snapit',
-        triggerHook: 0
+        triggerHook: 0.6
     })
         .setPin('#medtech')
         .setClassToggle('.container.medtech','show')
         // .addIndicators()
         .addTo(controller);
-        scene2.offset(460)
+        scene2.offset(700)
 
 }
 

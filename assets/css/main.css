@@ -62,13 +62,18 @@ div#medlang, div#medtech{
 
 .medlang{
     opacity:0;
-    transition: opacity 0.6s;
+    transition: opacity 0.2s;
 }
 
+
 .medlang.show{
+    
     opacity:1;
     width: 35% !important;
-    
+}
+
+.container.medlang.show.hide{
+    display: none;
 }
 
 .medtech{
@@ -76,9 +81,14 @@ div#medlang, div#medtech{
     transition: opacity 0.3s;
 }
 
-/* .speci-btn{
-    width:30%;
-} */
+.medtech.show{
+    opacity:1;
+    width: 35% !important;
+}
+
+.speci-btn{
+    border: none !important;    
+}
 
 .fun{
     height:100vh;
@@ -111,10 +121,7 @@ div#medlang, div#medtech{
 
 
 
-.medtech.show{
-    opacity:1;
-    width: 35% !important;
-}
+
 
 
 
@@ -198,8 +205,9 @@ h1{
 h2{
     font-size: 5.5vh;
 }
-p#theme-desc{
-    font-size: 2.6vh;
+#theme-desc{
+    font-size: 1.5rem;
+    font-weight: 450;
 }
 .row{
     padding-bottom: 4vh;
@@ -208,7 +216,9 @@ p#theme-desc{
     margin-left: 10px;
     padding: 2vh 2.5vw;
     color: black;
-    
+}
+button#startsession:hover{
+    color:white !important;
 }
 div#light_header{
     background-color: rgba(255, 255, 255, 0.9) ;
@@ -291,25 +301,9 @@ button.btn.bouton-out{
     padding-bottom: 0;
 }
 
-/* @keyframes aig-rot {
-    0%   { transform: rotate(0deg); }
-    20%  { transform: rotate(45deg); }
-    25%  { transform: rotate(35deg); }
-    30%  { transform: rotate(55deg); }
-    35%  { transform: rotate(45deg); }
-    50%  { transform: rotate(0deg); }
-    70%  { transform: rotate(-45deg); }
-    75%  { transform: rotate(-35deg); }
-    80%  { transform: rotate(-55deg); }
-    85%  { transform: rotate(-45deg); }
-    100%  { transform: rotate(0deg); }
+#session-indicators{
+    height: 100vh;
 }
-
-#aig:hover{
-    transform-origin: center center;
-    transform-box: fill-box;
-    animation: aig-rot 4s ease-in-out;
-} */
 .form-check-input:checked{
     background-color: darkgray;
     border-color: darkgray;
@@ -345,6 +339,7 @@ div.overlay{
 }
 #tutoring_intro{
     background-color: #f16163;
+    height: 100vh;
 }
 #tutoring_topics{
     background-color: rgb(61, 209, 202);

@@ -1,6 +1,6 @@
 console.clear();
 var w = window.innerWidth;
-var size = w > 992 ? "big" : "small";
+var size = w > 991 ? "big" : "small";
 var controller = new ScrollMagic.Controller();
 var snaptext = document.getElementById("snaptext")
 var height_snaptext = (snaptext.clientHeight)/2
@@ -11,27 +11,40 @@ if (size === "big") {
 
 
 
+
 function splitScroll() {
+    var vid1 = document.getElementById("vid1");
+
     controller = new ScrollMagic.Controller();
 
     var scene = new ScrollMagic.Scene({
-        duration: 700,
+        duration: "150%",
         triggerElement: '#socialmedi',
-        triggerHook: 0.5,
+        triggerHook: 0.05,
         
     })
         .setPin('#medlang')
         .setClassToggle('.container.medlang','show')
         // .addIndicators()
-        .addTo(controller);
-        scene.offset(360)
+        .addTo(controller)
+        .on("enter", function(){
+            vid1.play()
+        })
+        .on("leave", function(){
+            vid1.load()
+        })
+        scene.offset(80)
+        
+        
+        
     
     var scene2 = new ScrollMagic.Scene({
-        duration: 800,
+        duration: "100%",
         triggerElement: '#snapit',
-        triggerHook: 0.6
+        triggerHook: 0.3
     })
         .setPin('#medtech')
+        
         .setClassToggle('.container.medtech','show')
         // .addIndicators()
         .addTo(controller);

@@ -1,5 +1,6 @@
 main{
     min-height: 100vh;
+    overflow-x: hidden;
 }
 
 .nav-item {
@@ -34,58 +35,66 @@ nav{
 }
 
 
-#med{
-    height:100vh;
-}
-
 #arggs{
     height: 400vh;
 }
 
 .textlang{
-    height:80vh;
+    height:100vh;
+    z-index: 2;
 }
 .textlangg{
-    height:80vh;
+    height:100vh;
+    z-index: 2;
+    background-color: transparent;
 }
 
 .texttech{
-    height:60vh;
+    z-index: 2;
 }
 .texttechh{
     height:100vh;
+    z-index: 2;
+    background-color: transparent;
 }
 
 div#medlang, div#medtech{
-    height:60vh;
+    height:100vh;
+    width: 55vw;
 }
 
 .medlang{
-    opacity:0;
-    transition: opacity 0.2s;
+    opacity:0 !important;
+    transition: opacity 0s !important;
 }
 
 
 .medlang.show{
     
-    opacity:1;
-    width: 35% !important;
-}
-
-.container.medlang.show.hide{
-    display: none;
+    opacity:1!important;
+    
 }
 
 .medtech{
     opacity:0;
-    transition: opacity 0.3s;
+    transition: opacity 0s;
 }
 
 .medtech.show{
+    position: relative;
     opacity:1;
-    width: 35% !important;
 }
-
+#vid2{
+    position: absolute; 
+    z-index: -3;
+    top: -120%;
+    
+}
+#vid1{
+    position: absolute; 
+    z-index: -2;
+    top: -10%;  
+}
 .speci-btn{
     border: none !important;    
 }
@@ -96,10 +105,13 @@ div#medlang, div#medtech{
 
 
 @media only screen and (max-width: 992px) {
-    .medlang, .medtech {
-        opacity: 1;
-        width:80% !important;
+    
+    div#medlang, div#medtech{
+        height:80vh !important;
+        width: 100% !important;
+        opacity: 1 !important;
     }
+
     #decoy{
         width: 80% !important; 
     }
@@ -116,7 +128,21 @@ div#medlang, div#medtech{
         width: 100% !important;
         
     }
-
+    .medtech, .medlang{
+        opacity:1 !important;
+        
+    }
+    .medtech{
+        display: none !important;
+    }
+    #vid2, #vid1{
+        position: relative !important; 
+        top: 0 !important;  
+        z-index: 1 !important;
+        width: 100% !important;
+        height: auto !important;
+        
+    }
 }
 
 
@@ -191,7 +217,13 @@ section#blog_title{
     opacity: 1;
     background-repeat: no-repeat;   
 }
-
+a.check-spec{
+    color: #193383; 
+    text-decoration: none;
+ }
+a.check-spec:hover{
+    text-decoration: underline;
+}
 section#title{
     height: 100vh;    
     position: relative;

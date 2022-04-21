@@ -107,7 +107,7 @@ div#medlang, div#medtech{
 @media only screen and (max-width: 992px) {
     
     div#medlang, div#medtech{
-        height:80vh !important;
+        height:40vh !important;
         width: 100% !important;
         opacity: 1 !important;
     }
@@ -132,16 +132,23 @@ div#medlang, div#medtech{
         opacity:1 !important;
         
     }
-    .medtech{
-        display: none !important;
-    }
+    
     #vid2, #vid1{
         position: relative !important; 
         top: 0 !important;  
         z-index: 1 !important;
-        width: 100% !important;
+        
         height: auto !important;
         
+    }
+    #vid1{
+        width: 100% !important;
+    }
+    #vid2{
+        width: 200% !important;
+    }
+    .snaptext{
+        margin: 0 !important;
     }
 }
 
@@ -231,12 +238,8 @@ section#title{
     background-size: cover;
     background-repeat: no-repeat;   
 }
-h1{
-    font-size: 7vh;
-}
-h2{
-    font-size: 5.5vh;
-}
+
+
 #theme-desc{
     font-size: 1.5rem;
     font-weight: 450;
@@ -248,6 +251,7 @@ h2{
     margin-left: 10px;
     padding: 2vh 2.5vw;
     color: black;
+    background-color: white;
 }
 button#startsession:hover{
     color:white !important;
@@ -314,11 +318,9 @@ button.btn{
 
 #join{
     font-weight: 500;
-    font-size: 1.5vw;
 }
 #readmore{
     font-weight: 500;
-    font-size: 1.5vw;
     border-radius: 5rem;
 }
 button.btn.bouton-out{
@@ -333,9 +335,9 @@ button.btn.bouton-out{
     padding-bottom: 0;
 }
 
-#session-indicators{
+/* #session-indicators{
     height: 100vh;
-}
+} */
 .form-check-input:checked{
     background-color: darkgray;
     border-color: darkgray;

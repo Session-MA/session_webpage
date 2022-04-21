@@ -1,6 +1,6 @@
 console.clear();
 var w = window.innerWidth;
-var size = w > 991 ? "big" : "small";
+var size = w > 767 ? "big" : "small";
 var controller = new ScrollMagic.Controller();
 var snaptext = document.getElementById("snaptext")
 var height_snaptext = (snaptext.clientHeight)/2
@@ -14,41 +14,54 @@ if (size === "big") {
 
 function splitScroll() {
     var vid1 = document.getElementById("vid1");
-
+    var vid2 = document.getElementById("vid2");
     controller = new ScrollMagic.Controller();
 
     var scene = new ScrollMagic.Scene({
-        duration: "150%",
-        triggerElement: '#socialmedi',
-        triggerHook: 0.05,
+        duration: "65%",
+        triggerElement: '#thirdsec',
+        triggerHook: 0.2
         
     })
         .setPin('#medlang')
-        .setClassToggle('.container.medlang','show')
+        .setClassToggle('.medlang','show')
         // .addIndicators()
         .addTo(controller)
         .on("enter", function(){
+            vid1.setAttribute("autoplay", "none")
+            vid1.load()
             vid1.play()
         })
         .on("leave", function(){
             vid1.load()
+            vid1.play()
         })
-        scene.offset(80)
+        scene.offset(120)
         
         
         
     
     var scene2 = new ScrollMagic.Scene({
         duration: "100%",
-        triggerElement: '#snapit',
-        triggerHook: 0.3
+        triggerElement: '.textlang',
+        triggerHook: 0.2
     })
         .setPin('#medtech')
         
-        .setClassToggle('.container.medtech','show')
+        .setClassToggle('.medtech','show')
         // .addIndicators()
         .addTo(controller);
-        scene2.offset(700)
+        scene2.on("enter", function(){
+            vid2.setAttribute("autoplay", "none")
+            vid2.load()
+            vid2.play()
+        })
+        scene2.on("leave", function(){
+            vid2.load()
+            vid2.play()
+        })
+
+        scene2.offset(300)
 
 }
 
@@ -56,7 +69,7 @@ function splitScroll() {
 
 function sizeIt() {
     w = window.innerWidth;
-    var newSize = w > 992 ? "big" : "small";
+    var newSize = w > 767 ? "big" : "small";
     if (newSize != size) {
         size = newSize;
         if (newSize === "small") {

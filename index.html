@@ -104,43 +104,44 @@ title: Home
             </div>
         </div>
         
-        <div class="container py-2">
-            <div class="container" id="argss">    
+        <div class="container-fluid">
+            <div class="container-fluid" id="argss">    
                 <div class="row d-flex flex-row-reverse">
-                    <div class="col-md-6 med d-flex flex-column align-items-center ">
-                        <div class="container medlang"  id="medlang">
-                            <video preload muted width="130%" height="auto" id="vid1">
+                    <div class="col-md-7 med d-flex flex-column align-items-center ">
+                        <div class="container medlang d-flex justify-content-center"  id="medlang">
+                            <video autoplay preload muted class="medlang" width="auto" height="80%" id="vid1">
                                 <source src="./assets/images/ball-stairs.mp4" type="video/mp4">
                             </video>
                         </div>
-                        <div class="container medtech" id="medtech">
-                            <img class="img-fluid" src="./assets/images/tech.svg"  alt="#" >
+                        <div class="container medtech d-flex justify-content-center" id="medtech">
+                            <video autoplay preload loop muted class="medtech" width="200%" height="auto" id="vid2">
+                                <source src="./assets/images/actionable.mp4" type="video/mp4">
+                            </video>
                         </div>
                     </div>
-                    <div class="col-md-6 r text-start text-wrap p-2" id="snaptext">
-                        <div class="container d-flex flex-column justify-content-center align-items-center snaptext m-0 p-0" >
+                    <div class="col-md-5 text-start text-wrap p-2" id="snaptext">
+                        <div class="container d-flex flex-column justify-content-center align-items-center ms-5 p-0" >
                             <div class="container d-flex flex-column textlang py-5 my-5" style="margin-top: 20vh !important;" >
-                                <h2 class="pb-4 fw-bold">Set reasonable goals</h2>
+                                <h2 class="pb-4">Set reasonable goals</h2>
                                 <p id="theme-desc">Session understands your specific needs
                                 and make every session a step towards success.</p>
                                 <p id="theme-desc">By setting SMART objectives,
                                     we help you overcome challenges and achieve your goals in a short amount of time.</p>
-                                <div class="container-fluid px-0 mt-3">
-                                    <a href="#" class="fs-4 fw-bold text-start px-3" style="color: #193383; text-decoration: none;">
+                                <div class="container-fluid px-0 mt-3" id="snapit">
+                                    <a href="#" class="fs-4 fw-bold check-spec text-start px-3">
                                         Check it <img class="img-fluid" src="./assets/images/arrow-right.svg" style="height: 100%;" alt="#">
                                     </a>
                                 </div>
                             </div>
-                            <div class="container d-flex flex-column  texttech py-5 my-5" >
-                                <h2 class="pb-4" id="snapit">Learn actionable content</h2>
-                                <p id="theme-desc">Our methods and subjects make the learning material we design retainable, actionable and easier to apply in
+                            <div class="container d-flex flex-column bg-light p-3 ps-4 border border-dark rounded texttech" >
+                                <h2 class="pb-4 fw-bold" > Create maximum impact </h2>
+                                <p id="theme-desc">Our methods and subjects make the learning material we design retainable and easier to apply in
                                     real life.</p>
-                                <p id="theme-desc">Gain entry to various IT jobs, take your project to another level or simply have
-                                    fun.</p>
+                                <p id="theme-desc">With actionable knowledge, you can rapidly apply what you learned and start building what you want</p>
                                 
                             </div>
                             <div class="container d-flex flex-column justify-content-end textlangg py-5 my-5" >
-                                <h2 class="pb-4 mt-5">Language</h2>
+                                <h2 class="pb-4 mt-5 ">Language</h2>
                                 <p id="theme-desc">In this theme, you will learn about Computer Basics, Office Tools, Web, Python,
                                     Data and more...</p>
                                 <p id="theme-desc">Gain entry to various IT jobs, take your project to another level or simply have
@@ -233,6 +234,9 @@ title: Home
                     <button type="button" class="btn btn-primary py-3 px-5 mx-3" id="join" data-bs-toggle="modal" data-bs-target="#exampleModal">Join</button>
                 </div>
             </div>
+        </div>
+        <div class="container-fluid img-fluid p-0 m-0" id="stickynav">
+            <img src="./assets/images/bande-mar.svg" alt="">
         </div>
     </section>
     <section class="bg-white px-5 pb-0 pt-4">

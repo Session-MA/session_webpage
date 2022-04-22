@@ -94,6 +94,9 @@ div#medlang, div#medtech{
     top: -120%;
     
 }
+#socialmedi{
+    z-index: 5;
+}
 #vid1{
     position: absolute; 
     z-index: -2;

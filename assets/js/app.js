@@ -1,11 +1,15 @@
 console.clear();
 var w = window.innerWidth;
-var size = w > 767 ? "big" : "small";
+var size = w > 992 ? "big" : "small";
 var controller = new ScrollMagic.Controller();
 var snaptext = document.getElementById("snaptext")
-var height_snaptext = (snaptext.clientHeight)/2
+var apnd_text_parent = document.getElementById("texttech")
+var node = document.getElementById("medtech")
+
 if (size === "big") {
     splitScroll();
+} else {
+    apnd_text_parent.insertAdjacentElement('beforebegin',node);
 }
 
 
@@ -69,7 +73,7 @@ function splitScroll() {
 
 function sizeIt() {
     w = window.innerWidth;
-    var newSize = w > 767 ? "big" : "small";
+    var newSize = w > 992 ? "big" : "small";
     if (newSize != size) {
         size = newSize;
         if (newSize === "small") {

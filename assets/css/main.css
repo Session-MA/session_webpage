@@ -1,5 +1,5 @@
+
 main{
-    min-height: 100vh;
     overflow-x: hidden;
 }
 
@@ -107,7 +107,7 @@ div#medlang, div#medtech{
 @media only screen and (max-width: 992px) {
     
     div#medlang, div#medtech{
-        height:40vh !important;
+        height:80vh !important;
         width: 100% !important;
         opacity: 1 !important;
     }
@@ -130,9 +130,11 @@ div#medlang, div#medtech{
     }
     .medtech, .medlang{
         opacity:1 !important;
-        
     }
-    
+    /* .medtech{
+        display: none !important;
+    }
+     */
     #vid2, #vid1{
         position: relative !important; 
         top: 0 !important;  
@@ -145,7 +147,10 @@ div#medlang, div#medtech{
         width: 100% !important;
     }
     #vid2{
-        width: 200% !important;
+        width: 100% !important;
+    }
+    #vid3{
+        width: 100% !important;
     }
     .snaptext{
         margin: 0 !important;
@@ -193,7 +198,7 @@ div#medlang, div#medtech{
 // XX-Large devices (larger desktops, 1400px and up)
 @media (min-width: 1400px) { ... } */
 
-@media all and (max-width:992px) {
+@media all and (max-width:768px) {
 
     a#signin{
         

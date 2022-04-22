@@ -4,14 +4,17 @@ var size = w > 992 ? "big" : "small";
 var controller = new ScrollMagic.Controller();
 var snaptext = document.getElementById("snaptext")
 var apnd_text_parent = document.getElementById("texttech")
+var apnd_vid_parent = document.getElementsByClassName("med")[0]
 var node = document.getElementById("medtech")
+var apnd_text_parent2 = document.getElementById("textlang")
+var node2 = document.getElementById("medlang")
 
 if (size === "big") {
     splitScroll();
 } else {
-    apnd_text_parent.insertAdjacentElement('beforebegin',node);
+    apnd_text_parent.insertAdjacentElement('afterend',node);
+    apnd_text_parent2.insertAdjacentElement('afterend',node2);
 }
-
 
 
 
@@ -33,6 +36,7 @@ function splitScroll() {
         .addTo(controller)
         .on("enter", function(){
             vid1.setAttribute("autoplay", "none")
+            vid1.setAttribute("loop", "none")
             vid1.load()
             vid1.play()
         })
@@ -56,7 +60,8 @@ function splitScroll() {
         // .addIndicators()
         .addTo(controller);
         scene2.on("enter", function(){
-            vid2.setAttribute("autoplay", "none")
+            vid2.setAttribute("autoplay", "false")
+            vid2.setAttribute("loop", "false")
             vid2.load()
             vid2.play()
         })
@@ -77,66 +82,30 @@ function sizeIt() {
     if (newSize != size) {
         size = newSize;
         if (newSize === "small") {
-            console.log("The screen is now small - ScrollMagic has been destroyed by aliens.");
             controller.destroy(true);
         } else {
-            console.log("The screen is now large - ScrollMagic is active.");
+            splitScroll();
+        }
+    }
+}
+function resizeit() {
+    w = window.innerWidth;
+    var newSize = w > 992 ? "big" : "small";
+    if (newSize != size) {
+        size = newSize;
+        if (newSize === "small") {
+            controller.destroy(true);
+            apnd_text_parent.insertAdjacentElement('afterend',node);
+            apnd_text_parent2.insertAdjacentElement('afterend',node2);
+        } else {
+            apnd_vid_parent.insertAdjacentElement('beforeend',node2);
+            apnd_vid_parent.insertAdjacentElement('beforeend',node);
             splitScroll();
         }
     }
 }
 
+
+
 window.addEventListener("scroll", sizeIt);
-
-// window.addEventListener("resize", sizeIt);
-// var trig = document.getElementsByClassName("texttech");
-// // window.onscroll = function () { rev() };
-// // Get the header
-
-// var sttarg = document.getElementById("medlang");
-// var ndtarg = document.getElementById("medtech");
-// // Get the offset position of the navbar
-// var trig_top = trig.offsetTop;
-
-// function isInViewport(e) {
-//     e = trig
-//     const rect = e.getBoundingClientRect();
-//     return (
-//         rect.top >= 0 &&
-//         rect.left >= 0 &&
-//         rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-//         rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-//     );
-// }
-
-
-
-
-
-
-
-
-// document.addEventListener('scroll', function () {
-//     // const messageText = isInViewport(trig)
-    
-//     if (isInViewport(trig)) {
-//         ndtarg.style.display = "";
-//         sttarg.style.display = "none";
-//     } else {
-//         ndtarg.style.display = "none";
-//     }
-// },{
-//     passive: true
-// });
-
-// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
-// function rev() {
-//   if ( window.pageYOffset >= trig_top ) {
-//     ndtarg.style.display="";
-//     sttarg.style.display="none";
-//   } else {
-//     ndtarg.style.display="none";
-
-//   }
-// }
-// &&(window.pageYOffset < sect_top)
+window.addEventListener("resize", resizeit);

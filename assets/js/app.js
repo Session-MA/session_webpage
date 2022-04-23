@@ -32,17 +32,16 @@ function splitScroll() {
     })
         .setPin('#medlang')
         .setClassToggle('.medlang','show')
-        .addIndicators()
+        // .addIndicators()
         .addTo(controller)
         .on("enter", function(){
-            vid1.setAttribute("autoplay", "none")
-            vid1.setAttribute("loop", "none")
+            vid1.removeAttribute("autoplay")
+            vid1.removeAttribute("loop")
             vid1.load()
             vid1.play()
         })
         .on("leave", function(){
             vid1.load()
-            vid1.play()
         })
         scene.offset(120)
         
@@ -57,17 +56,15 @@ function splitScroll() {
         .setPin('#medtech')
         
         .setClassToggle('.medtech','show')
-        .addIndicators()
+        // .addIndicators()
         .addTo(controller);
         scene2.on("enter", function(){
-            vid2.setAttribute("autoplay", "false")
-            vid2.setAttribute("loop", "false")
+            vid2.removeAttribute("autoplay")
             vid2.load()
             vid2.play()
         })
         scene2.on("leave", function(){
             vid2.load()
-            vid2.play()
         })
 
         scene2.offset(100)

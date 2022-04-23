@@ -21,7 +21,7 @@ if (size === "big") {
     apnd_text_parent2.insertAdjacentElement('afterend',node2);
 }
 
-var promise = vid1.play();
+var promise = vid3.play();
 
 if (promise !== undefined) {
     promise.catch(error => {

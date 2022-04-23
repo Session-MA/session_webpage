@@ -20,11 +20,10 @@ if (size === "big") {
     apnd_text_parent.insertAdjacentElement('afterend',node);
     apnd_text_parent2.insertAdjacentElement('afterend',node2);
     vid1.removeAttribute("autoplay")
-    vid2.removeAttribute("autoplay")
-    vid3.removeAttribute("autoplay")
+    vid1.removeAttribute("controls")
+    vid1.load()
     vid1.play()
-    vid2.play()
-    vid3.play()
+    vid1.controls = false;
 }
 
 

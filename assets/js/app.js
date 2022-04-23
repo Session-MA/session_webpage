@@ -19,14 +19,18 @@ if (size === "big") {
 } else {
     apnd_text_parent.insertAdjacentElement('afterend',node);
     apnd_text_parent2.insertAdjacentElement('afterend',node2);
-    vid1.removeAttribute("autoplay")
-    vid1.removeAttribute("controls")
-    vid1.load()
-    vid1.play()
-    vid1.controls = false;
 }
 
+var promise = vid1.play();
 
+if (promise !== undefined) {
+    promise.catch(error => {
+        // Auto-play was prevented
+        // Show a UI element to let the user manually start playback
+    }).then(() => {
+        // Auto-play started
+    });
+}
 
 
 function splitScroll() {

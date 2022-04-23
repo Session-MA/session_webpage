@@ -32,7 +32,7 @@ function splitScroll() {
     })
         .setPin('#medlang')
         .setClassToggle('.medlang','show')
-        // .addIndicators()
+//         .addIndicators()
         .addTo(controller)
         .on("enter", function(){
             vid1.removeAttribute("autoplay")
@@ -56,7 +56,7 @@ function splitScroll() {
         .setPin('#medtech')
         
         .setClassToggle('.medtech','show')
-        // .addIndicators()
+//         .addIndicators()
         .addTo(controller);
         scene2.on("enter", function(){
             vid2.removeAttribute("autoplay")

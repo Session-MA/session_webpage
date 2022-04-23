@@ -8,20 +8,30 @@ var apnd_vid_parent = document.getElementsByClassName("med")[0]
 var node = document.getElementById("medtech")
 var apnd_text_parent2 = document.getElementById("textlang")
 var node2 = document.getElementById("medlang")
+var vid1 = document.getElementById("vid1");
+var vid2 = document.getElementById("vid2");
+var vid3 = document.getElementById("vid3");
+
+
 
 if (size === "big") {
     splitScroll();
 } else {
     apnd_text_parent.insertAdjacentElement('afterend',node);
     apnd_text_parent2.insertAdjacentElement('afterend',node2);
+    vid1.removeAttribute("autoplay")
+    vid2.removeAttribute("autoplay")
+    vid3.removeAttribute("autoplay")
+    vid1.play()
+    vid2.play()
+    vid3.play()
 }
 
 
 
 
 function splitScroll() {
-    var vid1 = document.getElementById("vid1");
-    var vid2 = document.getElementById("vid2");
+    
     controller = new ScrollMagic.Controller();
 
     var scene = new ScrollMagic.Scene({

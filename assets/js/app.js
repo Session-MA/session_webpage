@@ -25,14 +25,14 @@ function splitScroll() {
     controller = new ScrollMagic.Controller();
 
     var scene = new ScrollMagic.Scene({
-        duration: "65%",
+        duration: "115%",
         triggerElement: '#thirdsec',
         triggerHook: 0.2
         
     })
         .setPin('#medlang')
         .setClassToggle('.medlang','show')
-        // .addIndicators()
+        .addIndicators()
         .addTo(controller)
         .on("enter", function(){
             vid1.setAttribute("autoplay", "none")
@@ -50,14 +50,14 @@ function splitScroll() {
         
     
     var scene2 = new ScrollMagic.Scene({
-        duration: "100%",
-        triggerElement: '.textlang',
-        triggerHook: 0.2
+        duration: "60%",
+        triggerElement: '.textlang2',
+        triggerHook: 0.1
     })
         .setPin('#medtech')
         
         .setClassToggle('.medtech','show')
-        // .addIndicators()
+        .addIndicators()
         .addTo(controller);
         scene2.on("enter", function(){
             vid2.setAttribute("autoplay", "false")
@@ -70,7 +70,7 @@ function splitScroll() {
             vid2.play()
         })
 
-        scene2.offset(300)
+        scene2.offset(100)
 
 }
 

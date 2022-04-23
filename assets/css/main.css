@@ -1,3 +1,6 @@
+html{
+    overflow-x: hidden;
+}
 
 main{
     overflow-x: hidden;
@@ -38,15 +41,25 @@ nav{
 }
 
 
-#arggs{
-    height: 400vh;
+#argss{
+    height: 220vh;
 }
 
 .textlang{
-    height:100vh;
+    height:80vh;
     margin-top: 20vh;
     z-index: 2;
 }
+
+.textlang2{
+    
+    margin-bottom: 20vh;
+    z-index: 2;
+}
+.scrollmagic-pin-spacer{
+    z-index: 1;
+}
+
 .textlangg{
     height:100vh;
     z-index: 2;
@@ -54,10 +67,11 @@ nav{
 }
 
 .texttech{
+    margin-top: 20vh;
     z-index: 2;
 }
 .texttechh{
-    height:100vh;
+    height:50vh;
     z-index: 2;
     background-color: transparent;
 }
@@ -90,8 +104,9 @@ div#medlang, div#medtech{
 }
 #vid2{
     position: absolute; 
-    z-index: -3;
+    z-index: -6;
     top: -120%;
+    right: -20%
     
 }
 #socialmedi{
@@ -99,7 +114,7 @@ div#medlang, div#medtech{
 }
 #vid1{
     position: absolute; 
-    z-index: -2;
+    z-index: -6;
     top: -10%;  
 }
 .speci-btn{
@@ -109,78 +124,6 @@ div#medlang, div#medtech{
 .fun{
     height:100vh;
 }
-
-
-@media only screen and (max-width: 992px) {
-    
-    div#medtech{
-        height:60vh !important;
-        width: 100% !important;
-        opacity: 1 !important;
-    }
-    div#medlang{
-        height:60vh !important;
-        width: 100% !important;
-        opacity: 1 !important;
-    }
-
-    #decoy{
-        width: 80% !important; 
-    }
-    
-    section#title{
-        height: 100vh !important;    
-        position: relative !important;
-        background-position: 20%;
-        background-image: url('../images/cover.svg') !important;
-        background-size: cover !important;
-        background-repeat: no-repeat !important;   
-    }
-    #prod_menu{
-        width: 100% !important;
-        
-    }
-    .medtech, .medlang{
-        opacity:1 !important;
-    }
-    /* .medtech{
-        display: none !important;
-    }
-     */
-    #vid2, #vid1{
-        position: relative !important; 
-        top: 0 !important;  
-        z-index: 1 !important;
-        
-        height: auto !important;
-        
-    }
-    #vid1{
-        width: 100% !important;
-    }
-    #vid2{
-        
-        width: 200% !important;
-    }
-    #vid3{
-        width: 100% !important;
-    }
-    .snaptext{
-        margin: 0 !important;
-    }
-    .textlang, .texttech, .textlangg, .texttechh{
-        height: auto !important;
-        padding-top: 1rem !important;
-        padding-bottom: 1rem !important;
-        margin-top: 1rem !important;
-        margin-bottom: 1rem !important;
-    }
-}
-
-
-
-
-
 
 
 #snaptext::-webkit-scrollbar {
@@ -243,13 +186,21 @@ a.check-spec:hover{
     text-decoration: underline;
 }
 section#title{
-    height: 100vh;    
+    height: 149vh;    
     position: relative;
     background-image: url('../images/cover.svg') ;
     background-size: cover;
     background-repeat: no-repeat;   
 }
+#themes{
+    position: relative;
+    top: -30vh;
+}
 
+#thirdsec{
+    position: relative;
+    top: -20vh;
+}
 
 #theme-desc{
     font-size: 1.5rem;
@@ -275,6 +226,8 @@ div#dark_header{
     background-color: rgb(37, 37, 37) ;
 }
 .container#heading{
+    position: relative;
+    top: -20vh;
     padding-bottom: 5%;
     
 }
@@ -395,4 +348,87 @@ div.overlay{
     border-radius: 1rem;
 }
 
+@media only screen and (max-width: 992px) {
+    
+    div#medtech{
+        height:60vh !important;
+        width: 100% !important;
+        opacity: 1 !important;
+    }
+    div#medlang{
+        height:60vh !important;
+        width: 100% !important;
+        opacity: 1 !important;
+    }
 
+    #decoy{
+        width: 80% !important; 
+    }
+    
+    section#title{
+        height: 95vh !important;    
+        position: relative !important;
+        background-position: 30%;
+        background-image: url('../images/cover.svg') !important;
+        background-size: cover !important;
+        background-repeat: no-repeat !important;   
+    }
+    #prod_menu{
+        width: 100% !important;
+        
+    }
+    .medtech, .medlang{
+        opacity:1 !important;
+    }
+    
+    #vid2, #vid1{
+        position: relative !important; 
+        top: 0 !important;  
+        z-index: 1 !important;
+        
+        height: auto !important;
+        
+    }
+    #vid1{
+        width: 100% !important;
+    }
+    #vid2{
+        
+        width: 200% !important;
+    }
+    #vid3{
+        width: 100% !important;
+    }
+    .snaptext{
+        margin: 0 !important;
+    }
+    .textlang, .texttech, .textlangg, .texttechh{
+        height: auto !important;
+        padding-top: 1rem !important;
+        padding-bottom: 1rem !important;
+        margin-top: 1rem !important;
+        margin-bottom: 1rem !important;
+    }
+    #themes{
+        position: relative;
+        top: 0 !important;
+    }
+    #argss{
+        height: auto !important;
+    }
+    #thirdsec{
+        position: relative;
+        top: 0vh !important;
+    }
+    #tech, #busi{
+        display: flex !important;
+    }
+    #thecontbu{
+        display: none !important;
+    }
+    .container#heading{
+        position: relative;
+        top: -10vh !important;
+        padding-bottom: 5%;
+    }
+}

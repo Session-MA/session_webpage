@@ -15,21 +15,11 @@ var vid3 = document.getElementById("vid3");
 
 
 if (size === "big") {
+    vid3.removeAttribute("loop")
     splitScroll();
 } else {
     apnd_text_parent.insertAdjacentElement('afterend',node);
     apnd_text_parent2.insertAdjacentElement('afterend',node2);
-}
-
-var promise = vid3.play();
-
-if (promise !== undefined) {
-    promise.catch(error => {
-        // Auto-play was prevented
-        // Show a UI element to let the user manually start playback
-    }).then(() => {
-        // Auto-play started
-    });
 }
 
 
@@ -110,6 +100,7 @@ function resizeit() {
         } else {
             apnd_vid_parent.insertAdjacentElement('beforeend',node2);
             apnd_vid_parent.insertAdjacentElement('beforeend',node);
+            vid3.removeAttribute("loop")
             splitScroll();
         }
     }

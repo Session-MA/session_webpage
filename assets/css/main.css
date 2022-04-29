@@ -368,7 +368,7 @@ div.overlay{
     section#title{
         height: 95vh !important;    
         position: relative !important;
-        background-position: 30%;
+        background-position: 80%;
         background-image: url('../images/cover.svg') !important;
         background-size: cover !important;
         background-repeat: no-repeat !important;   
@@ -428,7 +428,7 @@ div.overlay{
     }
     .container#heading{
         position: relative;
-        top: -10vh !important;
+        top: 0vh !important;
         padding-bottom: 5%;
     }
 }

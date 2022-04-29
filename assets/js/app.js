@@ -3,6 +3,9 @@ var w = window.innerWidth;
 var size = w > 992 ? "big" : "small";
 var controller = new ScrollMagic.Controller();
 var snaptext = document.getElementById("snaptext")
+var main_element = document.getElementById("vid_intro")
+var vid_intro_element_parent = document.getElementById("title")
+var vid_intro_element = document.getElementById("heading")
 var apnd_text_parent = document.getElementById("texttech")
 var apnd_vid_parent = document.getElementsByClassName("med")[0]
 var node = document.getElementById("medtech")
@@ -20,6 +23,7 @@ if (size === "big") {
 } else {
     apnd_text_parent.insertAdjacentElement('afterend',node);
     apnd_text_parent2.insertAdjacentElement('afterend',node2);
+    main_element.insertAdjacentElement('afterbegin',vid_intro_element);
 }
 
 
@@ -97,9 +101,11 @@ function resizeit() {
             controller.destroy(true);
             apnd_text_parent.insertAdjacentElement('afterend',node);
             apnd_text_parent2.insertAdjacentElement('afterend',node2);
+            main_element.insertAdjacentElement('afterbegin',vid_intro_element);
         } else {
             apnd_vid_parent.insertAdjacentElement('beforeend',node2);
             apnd_vid_parent.insertAdjacentElement('beforeend',node);
+            vid_intro_element_parent.insertAdjacentElement('afterbegin',vid_intro_element);
             vid3.removeAttribute("loop")
             splitScroll();
         }

@@ -19,6 +19,11 @@ section{
     color: white;
 }
 
+#navbarDropdown{
+    color: rgb(255, 255, 255);
+    background-color: rgb(25, 25, 25);
+}
+
 nav{
     opacity: 1;
 }
@@ -348,7 +353,19 @@ div.overlay{
     border-radius: 1rem;
 }
 
+#tutdropmenuimg{
+    width: 100%;
+    height: auto;
+}
+
+
+
 @media only screen and (max-width: 992px) {
+
+    #tutdropmenuimg{
+        width: 65% !important;
+        height: auto !important;
+    }
     
     div#medtech{
         height:60vh !important;
@@ -365,6 +382,10 @@ div.overlay{
         width: 80% !important; 
     }
     
+
+
+
+
     section#title{
         height: 95vh !important;    
         position: relative !important;

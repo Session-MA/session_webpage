@@ -34,12 +34,12 @@ function splitScroll() {
     var scene = new ScrollMagic.Scene({
         duration: "115%",
         triggerElement: '#thirdsec',
-        triggerHook: 0.2
+        triggerHook: 0.1
         
     })
         .setPin('#medlang')
         .setClassToggle('.medlang','show')
-//         .addIndicators()
+        .addIndicators()
         .addTo(controller)
         .on("enter", function(){
             vid1.removeAttribute("autoplay")
@@ -50,7 +50,7 @@ function splitScroll() {
         .on("leave", function(){
             vid1.load()
         })
-        scene.offset(120)
+        scene.offset(130)
         
         
         

@@ -11,6 +11,7 @@ var apnd_vid_parent = document.getElementsByClassName("med")[0]
 var node = document.getElementById("medtech")
 var apnd_text_parent2 = document.getElementById("textlang")
 var node2 = document.getElementById("medlang")
+var node3 = document.getElementById("img_tools")
 var vid1 = document.getElementById("vid1");
 var vid2 = document.getElementById("vid2");
 var vid3 = document.getElementById("vid3");
@@ -32,14 +33,14 @@ function splitScroll() {
     controller = new ScrollMagic.Controller();
 
     var scene = new ScrollMagic.Scene({
-        duration: "115%",
+        duration: "105%",
         triggerElement: '#thirdsec',
-        triggerHook: 0.1
+        triggerHook: 0
         
     })
         .setPin('#medlang')
         .setClassToggle('.medlang','show')
-        .addIndicators()
+        // .addIndicators()
         .addTo(controller)
         .on("enter", function(){
             vid1.removeAttribute("autoplay")
@@ -49,32 +50,37 @@ function splitScroll() {
         })
         .on("leave", function(){
             vid1.load()
+            node2.classList.add("hide")
+            
         })
-        scene.offset(130)
+        scene.offset(80)
         
         
         
     
     var scene2 = new ScrollMagic.Scene({
-        duration: "60%",
+        duration: "100%",
         triggerElement: '.textlang2',
-        triggerHook: 0.1
+        triggerHook: 0
     })
         .setPin('#medtech')
         
         .setClassToggle('.medtech','show')
-//         .addIndicators()
+        // .addIndicators()
         .addTo(controller);
         scene2.on("enter", function(){
             vid2.removeAttribute("autoplay")
             vid2.load()
             vid2.play()
+            node3.style.opacity= 0 
         })
         scene2.on("leave", function(){
             vid2.load()
+            node2.classList.add("hide")
+            node3.style.opacity= 1
         })
 
-        scene2.offset(100)
+        scene2.offset(0)
 
 }
 

@@ -25,7 +25,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   in Languages, Business, Tech and Design 
   in individual or group modes.
 
-baseurl: "/session_webpage" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://session-ma.github.io" # the base hostname & protocol for your site, e.g. http://example.com
                           # [Required] for production environment.
 twitter_username: session

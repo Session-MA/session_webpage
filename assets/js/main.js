@@ -1,5 +1,8 @@
+var main_element = document.getElementById("vid_intro")
+
 
 var divs = ["lang", "busi", "tech"];
+var buts = ["language", "business", "technology"];
 var visibleId = null;
 function show(id) {
   if (visibleId !== id) {
@@ -8,7 +11,7 @@ function show(id) {
   hide();
 }
 function hide() {
-  var div, i, id;
+  var div, i, id, but;
   for (i = 0; i < divs.length; i++) {
     id = divs[i];
     div = document.getElementById(id);
@@ -18,6 +21,7 @@ function hide() {
       div.style.display = "none";
     }
   }
+
 }
 
 

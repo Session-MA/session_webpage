@@ -127,12 +127,12 @@ div#medlang, div#medtech{
     z-index: -6;
     top: -10%;  
 }
-.speci-btn{
+/* .speci-btn{
     border: none !important;    
-}
+} */
 
 .fun{
-    height:100vh;
+    min-height:100vh;
 }
 
 
@@ -195,12 +195,18 @@ a.check-spec{
 a.check-spec:hover{
     text-decoration: underline;
 }
+
 section#title{
-    height: 149vh;    
+    min-height: 100vh;
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
     position: relative;
+    /* background-position: -20vh 0 0 0; */
     background-image: url('../images/cover.svg') ;
-    background-size: cover;
-    background-repeat: no-repeat;   
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right top;
 }
 #themes{
     position: relative;
@@ -237,7 +243,7 @@ div#dark_header{
 }
 .container#heading{
     position: relative;
-    top: -20vh;
+    top: -10vh;
     padding-bottom: 5%;
     
 }
@@ -288,6 +294,11 @@ span{
 
 button.btn{
     border-radius: 5rem;
+}
+
+label.btn{
+    border-radius: 5rem;
+    border-width: 0.4vh;
 }
 
 #join{
@@ -363,10 +374,34 @@ div.overlay{
     height: auto;
 }
 
-#bggreen{
-    background-color: #052325 !important;
+#vid3{
+    width: 75% !important;
 }
 
+/* #bggreen{
+    background-color: #052325 !important;
+    
+} */
+
+/* dirou page css starts here*/
+
+.rass{
+    min-height: 100vh;
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+    position: relative;
+    /* background-position: -20vh 0 0 0; */
+    background-image: url('../images/nessiri.png') ;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right top;
+}
+
+
+
+
+/* dirou page css ends here*/
 
 @media only screen and (max-width: 992px) {
 
@@ -390,17 +425,20 @@ div.overlay{
         width: 80% !important; 
     }
     
-
-
-
+    #socialmedi{
+        z-index: 5;
+        position: relative;
+        top: -20vh;
+    }
 
     section#title{
-        height: 95vh !important;    
+        max-width: 100vw;
+        height: 100vh;   
         position: relative !important;
-        background-position: 80%;
         background-image: url('../images/cover.svg') !important;
         background-size: cover !important;
-        background-repeat: no-repeat !important;   
+        background-repeat: no-repeat !important;
+        background-position: top;
     }
     #prod_menu{
         width: 100% !important;
@@ -425,7 +463,7 @@ div.overlay{
         height: auto !important;
     }
     #vid3{
-        width: 100% !important;
+        width: 90% !important;
     }
     .snaptext{
         margin: 0 !important;
@@ -437,9 +475,20 @@ div.overlay{
         margin-top: 1rem !important;
         margin-bottom: 1rem !important;
     }
+
+    #texttech{
+        position: relative;
+        top: -10vh;
+    }
+
+    #textlang{
+        position: relative;
+        top: -10vh;
+    }
+
     #themes{
         position: relative;
-        top: 0 !important;
+        top: -30vh !important;
     }
     #argss{
         height: auto !important;
@@ -448,19 +497,29 @@ div.overlay{
         position: relative;
         top: 0vh !important;
     }
-    #tech, #busi{
+    #lang, #tech, #busi{
         display: flex !important;
     }
+    .disap{
+        display: none !important;
+    }
+
     #thecontbu{
         display: none !important;
     }
     .container#heading{
         position: relative;
-        top: 0vh !important;
+        top: -10vh !important;
         padding-bottom: 5%;
     }
     #stickynav{
         width: 150% !important;
         max-width: 150% !important;
     }
+
+    .imgtopics{
+        max-width: 80% !important;
+    }
+
+
 }

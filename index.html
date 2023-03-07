@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Home
+title: Accueil
 ---
 
 
@@ -8,82 +8,95 @@ title: Home
 <main id="main">
     <section class="d-flex img-fluid align-items-center" id="vid_intro"></section>
     <section class="container d-flex img-fluid align-items-center" id="title">
-        <div class="container" id="heading">
+        <div class="container pt-5" id="heading">
             <div class="row gx-0 pt-5">
-                <div class="col-lg-6 px-0 ">
-                    <video src="./assets/images/text-cover.mp4" width="95%" height="auto" id="vid3" muted autoplay loop playsinline>
-                    </video>
+                <div class="col-lg-8 px-0 py-4 ">
+                    <h1 class="lh-lg" style="font-size: 2.7rem;"> Explorez, apprenez, grandissez...</br>La découverte
+                        commence ici!</h1>
+                    <!-- <video src="./assets/images/text-cover.mp4" width="95%" height="auto" id="vid3" muted autoplay loop playsinline>
+                    </video> -->
                 </div>
             </div>
             <div class="row gx-0">
                 <div class="col-lg-6 px-0">
-                    <button type="button" class="btn btn-lg btn-white bouton-out btn-outline-dark"
-                        id="startsession">Start session</button>
+                    <button type="button" class="btn btn-lg btn-white bouton-out btn-outline-dark" id="startsession"
+                        ><a href="{{ site.baseurl }}/tutorat" class="text-reset" style="text-decoration:none">Commencer une session</a></button>
                 </div>
             </div>
         </div>
     </section>
-    <section class="bg-transparent d-flex align-items-center justify-content-center pb-0">
+    <section class="bg-transparent d-flex align-items-center justify-content-center pb-0 pt-5">
         <div class="container-fluid mx-2" id="themes">
             <div class="container" id="thecontbu">
                 <div class="row">
                     <div class="col">
-                        <input type="radio" class="btn-check" name="options-outlined" id="language" checked autocomplete="off" onclick="show('lang');">
-                        <label class="btn bouton-out btn-outline-danger py-2 px-4 mx-2 my-2" for="language">Language</label>
+                        <input type="radio" class="btn-check" name="options-outlined" id="language" checked
+                            autocomplete="off" onclick="show('lang');">
+                        <label class="btn bouton-out btn-outline-danger py-2 px-4 mx-2 my-2"
+                            for="language">Langues</label>
 
-                        <input type="radio" class="btn-check" name="options-outlined" id="business" autocomplete="off" onclick="show('busi');">
-                        <label class="btn bouton-out btn-outline-primary py-2 px-4 mx-2 my-2" for="business">Business</label>
+                        <input type="radio" class="btn-check" name="options-outlined" id="business" autocomplete="off"
+                            onclick="show('busi');">
+                        <label class="btn bouton-out btn-outline-primary py-2 px-4 mx-2 my-2"
+                            for="business">Business</label>
 
-                        <input type="radio" class="btn-check" name="options-outlined" id="technology" autocomplete="off" onclick="show('tech');">
-                        <label class="btn bouton-out btn-outline-dark py-2 px-4 mx-2 my-2" for="technology">Technology</label>
+                        <input type="radio" class="btn-check" name="options-outlined" id="technology" autocomplete="off"
+                            onclick="show('tech');">
+                        <label class="btn bouton-out btn-outline-dark py-2 px-4 mx-2 my-2"
+                            for="technology">Informatique</label>
                     </div>
                 </div>
             </div>
-            
-            <div class="container">
+
+            <div class="container pt-5">
                 <div class="row align-items-center justify-content-between px-3 pb-5" id="lang">
                     <div class="col-7 text-start py-2">
-                        <p class="h4 pb-3">Language sessions</p>
-                        <p class="fs-5 disap">In this theme, you will learn about Computer Basics, Office Tools, Web, Python,
-                            Data and more...</p>
-                        <p class="fs-5 disap">Gain entry to various IT jobs, take your project to another level or simply have
-                            fun.</p>
-                        <button type="button" href="#" class="btn speci-btn btn-outline-dark fs-6 text-start px-3">
-                            <i class="bi bi-chevron-right"></i> Check it
+                        <h1 class="pb-4" id="anchor-lang">Langues</h1>
+                        <p class="fs-4 disap">Divers langues s'offrent à vous tel que l'Anglais, le Français ou votre
+                            langue de choix...</p>
+                        <p class="fs-4 disap mb-5">Cela peut ouvrir de nouvelles opportunités professionnelles dans des
+                            entreprises multinationales et améliorer vos perspectives de carrière.</p>
+                        <button type="button"  class="btn mybtn btn-outline-dark fs-5 text-start px-4 py-3">
+                            <a href="{{ site.baseurl }}/tarifs" class="text-reset" style="text-decoration:none">Commencer</a>
                         </button>
                     </div>
                     <div class="col d-flex align-items-center justify-content-end pt-0">
-                        <img class="img-fluid imgtopics" src="./assets/images/language.svg" alt="#" style="max-height: 100vh">
+                        <img class="img-fluid imgtopics" src="./assets/images/language.svg" alt="#"
+                            style="max-height: 100vh">
                     </div>
                 </div>
                 <div class="row align-items-center justify-content-between px-3 pb-5" id="busi" style="display: none;">
                     <div class="col-7 text-start py-2">
-                        <p class="h4 pb-3">Business sessions</p>
-                        <p class="fs-5 disap">In this theme, you will learn about Computer Basics, Office Tools, Web, Python,
-                            Data and more...</p>
-                        <p class="fs-5 disap">Gain entry to various IT jobs, take your project to another level or simply have
+                        <h1 class="pb-4">Business</h1>
+                        <p class="fs-4 disap">Nos sujets d'affaires couvrent les domaines nécessaires pour les
+                            entrepreneurs et les opérateurs en entreprise</p>
+                        <p class="fs-4 disap mb-5">Maîtrisez les bases de l'entreprenariat, lancez votre projet ou
+                            développez votre entreprise.
                             fun.</p>
-                        <button type="button" href="#" class="btn speci-btn btn-outline-dark fs-6 text-start px-3">
-                            <i class="bi bi-chevron-right"></i> Check it
+                        <button type="button" class="btn mybtn btn-outline-dark fs-5 text-start px-4 py-3">
+                            <a href="{{ site.baseurl }}/tarifs" class="text-reset" style="text-decoration:none">Commencer</a>
                         </button>
                     </div>
                     <div class="col d-flex align-items-center justify-content-end pt-0">
-                        <img class="img-fluid imgtopics" src="./assets/images/business.svg" alt="#" style="max-height: 100vh">
+                        <img class="img-fluid imgtopics" src="./assets/images/business.svg" alt="#"
+                            style="max-height: 100vh">
                     </div>
                 </div>
                 <div class="row align-items-center justify-content-between px-3" id="tech" style="display: none;">
                     <div class="col-7 text-start py-2">
-                        <p class="h4 pb-3">Technology sessions</p>
-                        <p class="fs-5 disap">In this theme, you will learn about Computer Basics, Office Tools, Web, Python,
-                            Data and more...</p>
-                        <p class="fs-5 disap">Gain entry to various IT jobs, take your project to another level or simply have
-                            fun.</p>
-                        <button type="button" href="#" class="btn speci-btn btn-outline-dark fs-6 text-start px-3">
-                            <i class="bi bi-chevron-right"></i> Check it
+                        <h1 class="pb-4">Informatique</h1>
+                        <p class="fs-4 disap">Dans ce thème, vous apprendrez les bases de l'informatique, les outils de
+                            bureau, le web, Python,
+                            les données ou plus encore..</p>
+                        <p class="fs-4 disap mb-5">Accédez à divers emplois demandés, améliorez votre projet ou
+                            amusez-vous.</p>
+                        <button type="button" class="btn mybtn btn-outline-dark fs-5 text-start px-4 py-3">
+                            <a href="{{ site.baseurl }}/tarifs" class="text-reset" style="text-decoration:none">Commencer</a>
                         </button>
                     </div>
                     <div class="col d-flex align-items-center justify-content-end pt-0">
-                        <img class="img-fluid imgtopics" src="./assets/images/tech.svg" alt="#" style="max-height: 100vh">
+                        <img class="img-fluid imgtopics" src="./assets/images/tech.svg" alt="#"
+                            style="max-height: 100vh">
                     </div>
                 </div>
             </div>
@@ -93,27 +106,27 @@ title: Home
     <section class="bg-white d-flex flex-column align-items-center justify-content-center pt-0" id="thirdsec">
         <div class="container" id="socialmedi">
             <div class="row mx-2">
-                <div class="col py-2 px-3 border border-dark border-4 d-flex align-items-center justify-content-between">
+                <div
+                    class="col py-2 px-3 border border-dark border-4 d-flex align-items-center justify-content-between">
+                    
                     <button type="button" class="btn py-2  mx-3 my-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="5vw" height="auto" fill="currentColor"
-                            class="bi bi-twitter" viewBox="0 0 16 16">
-                            <path
-                                d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
-                        </svg>
-                    </button>
-                    <button type="button" class="btn py-2  mx-3 my-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="5vw" height="auto" fill="currentColor"
+                        <a href="https://www.instagram.com/session.maroc/?hl=fr">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="5vw" height="auto" fill="currentColor"
                             class="bi bi-instagram" viewBox="0 0 16 16">
                             <path
                                 d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
-                        </svg>
+                            </svg>
+                        </a>
+                        
                     </button>
                     <button type="button" class="btn py-2  mx-3 my-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="5vw" height="auto" fill="currentColor"
-                            class="bi bi-linkedin" viewBox="0 0 16 16">
-                            <path
-                                d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
-                        </svg>
+                        <a href="https://www.instagram.com/session.maroc/?hl=fr">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="5vw" height="auto" fill="currentColor"
+                                class="bi bi-linkedin" viewBox="0 0 16 16">
+                                <path
+                                    d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+                            </svg>
+                        </a>
                     </button>
                     <button type="button" class="btn py-2  mx-3 my-2">
                         <svg xmlns="http://www.w3.org/2000/svg" width="5vw" height="auto" fill="currentColor"
@@ -131,8 +144,9 @@ title: Home
                 <div class="row d-flex flex-row-reverse">
                     <div class="col-lg-7 med d-flex flex-column align-items-center ">
                         <div class="container bg-white medlang d-flex justify-content-center" id="medlang">
-                            <img class="img" src="./assets/images/smiling_student.png" width="auto" height="85%" alt="#">
-                                
+                            <img class="img" src="./assets/images/smiling_student.png" width="auto" height="85%"
+                                alt="#">
+
                         </div>
                         <div class="container bg-white medtech d-flex justify-content-center" id="medtech">
                             <video autoplay playsinline loop muted class="medtech" id="vid2">
@@ -144,33 +158,31 @@ title: Home
                         <div
                             class="container d-flex flex-column snaptext justify-content-center align-items-center p-0">
                             <div class="container d-flex flex-column textlang py-5 my-5" id="textlang">
-                                <h2 class="pb-4">Set reasonable goals</h2>
-                                <p class="fs-5">Session understands your specific needs
-                                    and make every session a step towards success.</p>
-                                <p class="fs-5">By setting SMART objectives,
-                                    we help you overcome challenges and achieve your goals in a short amount of time.
+                                <h2 class="pb-4">Fixez des objectifs raisonnables</h2>
+                                <p class="fs-5">Session comprend vos besoins spécifiques
+                                    et chaque session est une étape vers votre accomplissement.</p>
+                                <p class="fs-5">En fixant des objectifs SMART,
+                                    nous vous aidons à surmonter les défis et à atteindre vos objectifs en peu de temps.
                                 </p>
                                 <div class="container-fluid px-0 mt-3" id="snapit">
-                                    <a href="#" class="fs-4 fw-bold check-spec text-start px-3">
-                                        Check it <img class="img-fluid" src="./assets/images/arrow-right.svg"
-                                            style="height: 100%;" alt="#">
+                                    <a href="#" class="btn mybtn btn-outline-dark fs-5 text-start px-4 py-3">
+                                        Consulter
                                     </a>
                                 </div>
                             </div>
-                            <div class="container d-flex flex-column bg-light p-3 textlang2 border border-dark rounded" id="textlang2">
-                                <p class="fs-5">"Session courses helped me a lot!!<br>I went from basic notions to
-                                    talking pretty good French in less than 10 sessions."</p>
+                            <div class="container d-flex flex-column bg-light p-3 textlang2 border border-dark rounded"
+                                id="textlang2">
+                                <p class="fs-5">"Les cours de Session m'ont beaucoup aidé !! <br>J'ai pu sentir mon
+                                    évolution et j'en suis contente."</p>
                                 <p class="fs-5"></p>
-
                             </div>
                             <div class="container d-flex flex-column bg-white mx-3 rounded texttech" id="texttech">
-                                <h2 class="pb-4 fw-bold"> Create maximum impact </h2>
-                                <p class="fs-5">Our methods and subjects make the learning material we design
-                                    retainable and easier to apply in
-                                    real life.</p>
-                                <p class="fs-5">With actionable knowledge, you can rapidly apply what you learned and
-                                    start building your path, your career or your company.</p>
-
+                                <h2 class="pb-4 fw-bold">Créez l'IMPACT</h2>
+                                <p class="fs-5">Nos méthodes et nos sujets font que le matériel d'apprentissage que nous
+                                    concevons est mémorisable et plus facile à appliquer dans la vie réelle.</p>
+                                <p class="fs-5">Avec des connaissances opérationnelles, vous pouvez rapidement appliquer
+                                    ce que vous avez appris et commencer à construire votre chemin, votre carrière ou
+                                    votre entreprise.</p>
                             </div>
                         </div>
                     </div>
@@ -184,25 +196,25 @@ title: Home
 
     </section>
     <section class="bg-white d-flex align-items-center justify-content-center pb-4 pt-5" id="bggreen">
-            <div class="container">
-                <div class="container-fluid">
-                    <div class="row align-items-center justify-content-center">
-                        <div class="col-lg-5 d-flex flex-column justify-content-center mx-3">
-                            <div class="container text-dark p-3">
-                                <h2 class="pb-4">Enhance your capabilities <br> with the right tools and people</h2>
-                                <p class="fs-5">Learn faster by expanding your tool set and resources.</p>
-                                <p class="fs-5">Share with other learners and consultants from the community.</p>
-                                <p class="fs-5">Gain entry to various jobs, take your project to another level or simply have
-                                    fun.</p>
-                            </div>
-                        </div>
-                        <div class="col-lg d-flex justify-content-center align-items-start p-2">
-                            <img class="img-fluid" src="./assets/images/tools_and_resources.svg" style="max-width: 75%;"
-                                alt="#" id="img_tools">
+        <div class="container">
+            <div class="container-fluid">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-lg-5 d-flex flex-column justify-content-center mx-3">
+                        <div class="container text-dark p-3">
+                            <h2 class="pb-4">Améliorez vos capacités <br> avec les bons outils et des tuteurs
+                                expérimentés.</h2>
+                            <p class="fs-5">Apprenez plus rapidement en élargissant votre ensemble d'outils et de
+                                ressources.</p>
+                            <p class="fs-5">Partagez avec d'autres apprenants et consultants de la communauté.</p>
                         </div>
                     </div>
-                </div>  
+                    <div class="col-lg d-flex justify-content-center align-items-start p-2">
+                        <img class="img-fluid" src="./assets/images/tools_and_resources.svg" style="max-width: 75%;"
+                            alt="#" id="img_tools">
+                    </div>
+                </div>
             </div>
+        </div>
         </div>
     </section>
     <section class="bg-white d-flex flex-column align-items-center justify-content-center" id="session-indicators">
@@ -212,10 +224,11 @@ title: Home
         <div class="container-fluid">
             <div class="row py-5 text-center align-items-start justify-content-center ">
 
-                <div class="col-lg fs-4 p-4 pb-0">
-                    <h2 class="py-3"> Get the best learning experience<br>and learn the skills you need </h2>
+                <div class="col-lg p-4 pb-0">
+                    <h1 class="py-5"> Obtenez la meilleure expérience d'apprentissage<br> et apprenez les compétences
+                        dont vous avez besoin.</h2>
                 </div>
-                <div class="row p-0">
+                <div class="row py-4">
                     <div class="col-lg p-3">
 
                         <h2 class="py-3"> 500 +<br>
@@ -230,14 +243,14 @@ title: Home
                     </div>
                     <div class="col-lg p-3">
                         <h2 class="py-3"> 50 +<br>
-                            <span> courses </span>
+                            <span> cours </span>
                         </h2>
                     </div>
                 </div>
 
                 <div class="col-lg py-4">
-                    <button type="button" class="btn btn-primary py-3 px-5 mx-3" id="join" data-bs-toggle="modal"
-                        data-bs-target="#exampleModal">Join</button>
+                    <button type="button" class="btn btn-dark py-3 fs-5 px-5 mx-3 join" id="join" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">Rejoindre</button>
                 </div>
             </div>
         </div>
@@ -250,23 +263,24 @@ title: Home
             <div class="row align-items-center justify-content-center ">
                 <div class="col-lg text-start p-2">
                     <div class="container">
-                        <h2 class="pb-5">Schedule an <br>orientation session</h2>
-                        <p class="fs-5"> Our orientation session helps you get a clear idea about our solutions and their
-                            adaptibiliy.</p>
-                        <p class="fs-5">Our policy is to be 100% transparent.</p>
-                        <p class="fs-5">You set your goals and we help you reach them.</p>
+                        <h1 class="pb-5">Séance d'orientation</h1>
+                        <p class="fs-5">Notre séance d'orientation vous aide à avoir une idée claire de nos solutions et
+                            de leur adaptabilité.</p>
+                        <p class="fs-5">Notre politique démarche est 100% transparente.</p>
+                        <p class="fs-5">Vous fixez vos objectifs et nous vous aidons à les atteindre.</p>
 
-                        <button type="button" class="btn btn-dark py-3 px-4 mx-3 my-5" id="readmore" data-bs-toggle="modal"
-                            data-bs-target="#exampleModal">
-                            <i class="bi bi-chevron-right"></i> Read more
+                        <button type="button" class="btn btn-dark fs-5 py-3 px-4 mx-3 my-5" id="readmore"
+                            data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            Contacter
                         </button>
-                    
+
                         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
                             aria-hidden="true">
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Getting to know you form</h5>
+                                        <h5 class="modal-title" id="exampleModalLabel">Dites-nous plus à propos de vous
+                                        </h5>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
                                             aria-label="Close"></button>
                                     </div>
@@ -279,7 +293,7 @@ title: Home
                                 </div>
                             </div>
                         </div>
-                    </div>  
+                    </div>
                 </div>
                 <div class="col-lg p-5 pt-0">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 470 470">

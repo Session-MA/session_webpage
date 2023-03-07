@@ -14,7 +14,6 @@ var smiling_student = document.getElementById("medlang")
 var node3 = document.getElementById("bggreen")
 var vid1 = document.getElementById("medlang");
 var vid2 = document.getElementById("vid2");
-var vid3 = document.getElementById("vid3");
 
 
 
@@ -22,7 +21,7 @@ if (size === "big") {
     apnd_vid_parent.insertAdjacentElement('beforeend',smiling_student);
     apnd_vid_parent.insertAdjacentElement('beforeend',impact_anim);
     vid_intro_element_parent.insertAdjacentElement('afterbegin',vid_intro_element);
-    vid3.removeAttribute("loop")
+
     splitScroll();
 } else {
     second_text.insertAdjacentElement('beforebegin',impact_anim);
@@ -59,7 +58,7 @@ function splitScroll() {
         
     
     var scene2 = new ScrollMagic.Scene({
-        duration: "60%",
+        duration: "90%",
         triggerElement: '.textlang2',
         triggerHook: 0
     })
@@ -99,7 +98,7 @@ function sizeIt() {
             apnd_vid_parent.insertAdjacentElement('beforeend',smiling_student);
             apnd_vid_parent.insertAdjacentElement('beforeend',impact_anim);
             vid_intro_element_parent.insertAdjacentElement('afterbegin',vid_intro_element);
-            vid3.removeAttribute("loop")
+        
             splitScroll();
         }
     }
@@ -117,7 +116,7 @@ function resizeit() {
             apnd_vid_parent.insertAdjacentElement('beforeend',smiling_student);
             apnd_vid_parent.insertAdjacentElement('beforeend',impact_anim);
             vid_intro_element_parent.insertAdjacentElement('afterbegin',vid_intro_element);
-            vid3.removeAttribute("loop")
+        
             splitScroll();
         }
     }

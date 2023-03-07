@@ -232,7 +232,10 @@ section#title{
     background-color: white;
 }
 button#startsession:hover{
-    color:white !important;
+    
+    color:black !important;
+    background-color: rgb(205, 205, 205);
+    
 }
 div#light_header{
     background-color: rgba(255, 255, 255, 0.9) ;
@@ -282,7 +285,7 @@ section#about-description{
     
     background-image: url('../images/grn-pti.svg') ;
     background-size: contain;
-    background-color: #052325;
+    background-color: #ffffff;
     background-repeat: no-repeat;
     background-position: center;
     
@@ -301,8 +304,14 @@ label.btn{
     border-width: 0.4vh;
 }
 
-#join{
+.join{
     font-weight: 500;
+    background-color: #16474c !important;  
+}
+
+.readmore{
+    font-weight: 500;
+    border-radius: 5rem;
 }
 #readmore{
     font-weight: 500;
@@ -357,11 +366,15 @@ div.overlay{
     border-left: solid;
 }
 #tutoring_intro{
-    background-color: #f16163;
-    height: 100vh;
+    background-color: #f4c0dc;
+    min-height: 100vh;
 }
+.mybtn{
+    border-radius: 5rem !important;
+}
+
 #tutoring_topics{
-    background-color: rgb(61, 209, 202);
+    background-color: rgb(169, 247, 183);
 }
 #tr_display{
     min-height: 230px;
@@ -435,7 +448,7 @@ div.overlay{
         max-width: 100vw;
         height: 100vh;   
         position: relative !important;
-        background-image: url('../images/cover.svg') !important;
+        background-image: none !important;
         background-size: cover !important;
         background-repeat: no-repeat !important;
         background-position: top;

@@ -10,16 +10,14 @@
                 <!-- Grid column -->
                 <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
                     <!-- Content -->
-                    <h5 class="text-uppercase fw-bold mb-2">
+                    <h4 class="text-uppercase fw-bold mb-2">
                         Session
-                    </h6>
-                    <h6 class="text-uppercase mb-4">
-                        Learning is a lifestyle
-                    </h6>
-                    <p>
-                        We offer the best tutoring and accompaniment services
-                        making learning an experience and lifestyle.
-                    </p>
+                        </h4>
+                        <h5 class="mb-4 lh-base">
+                            Apprendre aujourd'hui, c'est se développer pour toujours.
+                        </h5>
+
+
                 </div>
                 <!-- Grid column -->
 
@@ -27,16 +25,17 @@
                 <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
                     <!-- Links -->
                     <h6 class="text-uppercase fw-bold mb-4">
-                        Tutoring
+                        Tutorat
                     </h6>
                     <p>
-                        <a href="{{ site.baseurl }}/#language" class="text-reset" onclick="show('lang');">Language</a>
+                        <a href="{{ site.baseurl }}/#language" class="text-reset" onclick="show('lang');">Langues</a>
                     </p>
                     <p>
                         <a href="{{ site.baseurl }}/#business" class="text-reset" onclick="show('busi');">Business</a>
                     </p>
                     <p>
-                        <a href="{{ site.baseurl }}/#technology" class="text-reset" onclick="show('tech');">Technology</a>
+                        <a href="{{ site.baseurl }}/#technology" class="text-reset"
+                            onclick="show('tech');">Informatique</a>
                     </p>
                 </div>
                 <!-- Grid column -->
@@ -45,19 +44,39 @@
                 <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
                     <!-- Links -->
                     <h6 class="text-uppercase fw-bold mb-4">
-                        Useful links
+                        Liens utiles
                     </h6>
                     <p>
-                        <a href="#!" class="text-reset">Pricing</a>
+                        <a href="{{ site.baseurl }}/tutorat" class="text-reset">Tutorat</a>
                     </p>
                     <p>
-                        <a href="#!" class="text-reset">Settings</a>
+                        <a href="{{ site.baseurl }}/tarifs" class="text-reset">Tarifs</a>
                     </p>
                     <p>
-                        <a href="#!" class="text-reset">Orders</a>
+                        <a href="{{ site.baseurl }}/#language" type="button" class="text-reset"
+                        data-bs-toggle="modal" data-bs-target="#exampleModal">Contact</a>
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Dites-nous plus à propos de vous</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <iframe
+                                        src="https://docs.google.com/forms/d/e/1FAIpQLSdhaoSeRNXgOroEqvvLqm51MiTV83OE-Yj6y645nElf3WSylg/viewform?embedded=true"
+                                        width="480" height="500" scrolling="yes" frameborder="0" marginheight="0"
+                                        marginwidth="0" id="iFrame1" style="overflow: hidden;">Chargement…</iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
                     </p>
                     <p>
-                        <a href="#!" class="text-reset">Help</a>
+                        <a href="{{ site.baseurl }}/Session" class="text-reset">Session</a>
                     </p>
                 </div>
                 <!-- Grid column -->
@@ -70,9 +89,10 @@
                     </h6>
                     <p>Casablanca, Californie, Maroc</p>
                     <p>
-                        
+
                         contact.session4@gmail.com
                     </p>
+                    <p> +212 6 41 90 46 20 </p>
                     <p> +212 6 40 17 95 60 </p>
                 </div>
                 <!-- Grid column -->

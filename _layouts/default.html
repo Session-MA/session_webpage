@@ -10,7 +10,8 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
         <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
-        <link href="https://vjs.zencdn.net/7.18.1/video-js.css" rel="stylesheet" />
+        <link href="https://vjs.zencdn.net/7.18.1/video-js.css" rel="stylesheet">
+        <link rel="shortcut icon" type="image/x-icon" href="{{ site.baseurl }}/assets/images/session_logo.svg">
         
         
         
@@ -19,15 +20,15 @@
     </head>
     <body>
         <!-- Navigation -->
-        {% unless page.title == "games" %}
-            {% include white_navbar.html %}
-        {% endunless %} 
+        
+        {% include white_navbar.html %}
+        
         <!-- Body -->
         {{ content }}
         <!-- Navigation -->
-        {% unless page.title == "games" %}
-            {% include footer.html %}
-        {% endunless %}         
+        
+        {% include footer.html %}
+              
         <!-- Scripts -->
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
